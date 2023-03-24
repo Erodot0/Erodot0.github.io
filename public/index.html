@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Janmanpreet</title>
+  <link rel="shortcut icon" href="./assets/images/icon.jpg" type="image/x-icon">
+  <!-- style -->
+  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="stylesheet" href="./style/footer.css">
+  <!-- scripts -->
+  <script defer src=" ./script/typewriting.js"></script>
+  <script defer src="./script/skillCarouselScroll.js"></script>
+  <script defer src="./script/navHandler.js"></script>
+  <script defer src="./script/contactEffect.js"></script>
+  <script defer src="./script/contactFormHandler.js"></script>
+  <script defer type="module" src="./script/socialInjector.js"></script>
+  <script defer type="module" src="./script/experienceInjector.js"></script>
+  <script defer type="module" src="./script/skillInjector.js"></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="#heroWrapper" class="navbar--logo">
+      JS
+    </a>
+    <div class="navbar--menu">
+      <div class="navbar--menu__hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="navbar--menu__list menuClickEffect">
+        <li class="liClickEffect"><a href="#aboutWrapper">About</a></li>
+        <li class="liClickEffect"><a href="#experiencesWrapper">Experience</a></li>
+        <li class="liClickEffect"><a href="#contact-form">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- main -->
+  <div class="main wrapper" id="heroWrapper">
+    <div class="main--text">
+      <h1 class="main--text__title">I'm <br> janmanpreet Singh</h1>
+      <p class="main--text__paragraph"></p>
+    </div>
+    <div class="main--media">
+      <img class="main--media__img1" src="./assets/images/img1.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="about wrapper" id="aboutWrapper">
+    <div class="about--text">
+      <h2 class="about--text__title"></h2>
+      <p class="about--text__paragraph">
+      </p>
+    </div>
+    <div class="about--media">
+      <img class="about--media__img" src="./assets/images/img2.jpg" alt="">
+    </div>
+    <!-- skills carousel -->
+    <div class="skills">
+      <div class="skills--text">
+        <h2 class="skills--text__title">Skills</h2>
+      </div>
+      <div class="skills--carousel">
+        <ul class="carousel--wrapper">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- skill container for pc -->
+  <div class="skillPc wrapper">
+    <div class="skillWrapper">
+      <div class="skillWrapper--text">
+        <h2 class="skillWrapper--text__title">Learned</h2>
+      </div>
+      <div class="skillsPc" id="learnedSkills"></div>
+    </div>
+    <div class="skillPc--title">
+      <h1>Skills</h1>
+    </div>
+    <div class="skillWrapper">
+      <div class="skillWrapper--text">
+        <h2 class="skillWrapper--text__title">Learning</h2>
+      </div>
+      <div class="skillsPc" id="inProgress"></div>
+    </div>
+  </div>
+
+  <div class="experiences section wrapper" id="experiencesWrapper">
+    <h1 class="experiences--title">Experiences</h1>
+  </div>
+
+  <div class="contact wrapper">
+    <h1 class="contactTitle">Contact me!</h1>
+    <div class="contactContainer">
+      <ul class="contactContainer--social">
+      </ul>
+
+      <form class="form-wrapper" id="contact-form" method="post">
+        <div class="form">
+          <div class="formInputWrapper">
+            <div class="form--field">
+              <label class="form--field__label" for="formName">Name</label>
+              <input class="form--field__input" required name="name" id="formName" type="text">
+            </div>
+            <div class="form--field">
+              <label class="form--field__label" for="formEmail">Email</label>
+              <input class="form--field__input" required name="email" id="formEmail" type="email">
+            </div>
+          </div>
+          <div class="form--field">
+            <textarea class="form--field__input" required name="message" type="text"></textarea>
+          </div>
+        </div>
+        <button class="form--btn" type="submit">Send</button>
+        <div class="emailSentWRapper">
+          <h3 class="emailSentWRapper--title"></h3>
+          <div class="emailSentWRapper--media">
+            <img class="emailSentWRapper--media__img" src="">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="waveWrapper">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#000000" fill-opacity="1" d="M0,160L60,165.3C120,171,240,181,360,186.7C480,192,600,192,720,176C840,160,960,128,1080,133.3C1200,139,1320,181,1380,202.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+      </svg>
+    </div>
+    <div class="footer">
+      <div class="footerWrapper">
+        <p class="footer--text">Version 1.0.0</p>
+        <p class="footer--text">This website was designed and created by <br> Janmanpreet Singh</p>
+        <p class="footer--text">Some icons were taken from 
+          <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a>,
+          the illustrations were taken from 
+          <a href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">Freepik</a>
+          or 
+          <a href="https://blush.design/en" target="_blank" rel="noopener noreferrer">Blush</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
