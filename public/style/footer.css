@@ -18,6 +18,7 @@ footer .footer .footerWrapper {
   flex-direction: column;
   gap: 15px;
   text-align: center;
+  align-items: center;
 }
 footer .footer--text {
   color: white;
