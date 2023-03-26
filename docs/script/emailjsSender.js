@@ -2,14 +2,14 @@ const form = document.querySelector("#contact-form");
 const btn = document.querySelector(".form--btn");
 const inputs = document.querySelectorAll(".form--field__input");
 
-
+console.log(inputs[0].value, inputs[1].value,)
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   btn.value = "Sending...";
 
   const setData = {
-    name: inputs[0].value,
-    email: inputs[1].value,
+    from_name: inputs[0].value,
+    from_email: inputs[1].value,
     message: inputs[2].value,
   };
 
