@@ -8,8 +8,8 @@ form.addEventListener("submit", function (event) {
   btn.value = "Sending...";
 
   const setData = {
-    name: inputs[0].value,
-    email: inputs[1].value,
+    from_name: inputs[0].value,
+    from_email: inputs[1].value,
     message: inputs[2].value,
   };
 
