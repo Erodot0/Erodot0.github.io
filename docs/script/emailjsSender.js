@@ -1,16 +1,6 @@
 const form = document.querySelector("#contact-form");
 const btn = document.querySelector(".form--btn");
 const inputs = document.querySelectorAll(".form--field__input");
-let serviceId;
-let templateId;
-
-//fetching the keys
-fetch('../config.json')
-  .then(res => res.json() )
-  .then(env => {
-    serviceId = env.service_id;
-    templateId = env.template_id;
-  });
 
 
 form.addEventListener("submit", function (event) {
@@ -23,11 +13,12 @@ form.addEventListener("submit", function (event) {
     message: inputs[2].value,
   };
 
-  emailjs.send(serviceId, templateId, setData).then((res) => {
+  emailjs.send("service_nawfksp", "template_mkt650n", setData).then((res) => {
     if (res.status === 200) {
       btn.value = "Email sent";
       resetForm("sent");
     } else {
+      btn.value = "Error";
       resetForm("error");
     }
   });
