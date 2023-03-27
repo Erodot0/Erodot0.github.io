@@ -7,6 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Janmanpreet</title>
   <link rel="shortcut icon" href="./assets/images/icon.jpg" type="image/x-icon">
+  <!-- meta tags -->
+  <meta charset="utf-8">
+  <title>Janmanpreet Singh</title>
+  <!-- Search Engine -->
+  <meta name="image" content="./assets/images/icon.jpg">
+  <!-- Schema.org for Google -->
+  <meta itemprop="name" content="Janmanpreet Singh">
+  <meta itemprop="image" content="./assets/images/icon.jpg">
+  <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+  <meta name="og:title" content="Janmanpreet Singh">
+  <meta name="og:url" content="https://www.janmanpreet.com/">
+  <meta name="og:site_name" content="Janmanpreet">
+  <meta name="og:type" content="website">
   <!-- style -->
   <link rel="stylesheet" href="./style/style.css" />
   <link rel="stylesheet" href="./style/footer.css">
@@ -29,8 +42,8 @@
 </head>
 
 <body>
-  <header class="navbar">
-    <a href="#heroWrapper" class="navbar--logo">
+  <header class="navbar" id="navbar">
+    <a href="#navbar" class="navbar--logo">
       JS
     </a>
     <div class="navbar--menu">
@@ -40,10 +53,10 @@
         <span></span>
       </div>
       <ul class="navbar--menu__list menuClickEffect">
-        <li class="liClickEffect"><a href="#aboutWrapper">About</a></li>
-        <li class="liClickEffect"><a href="#experiencesWrapper">Experience</a></li>
-        <li class="liClickEffect"><a href="#contactWrapper">Contact</a></li>
-        <li class="liClickEffect"><a href = "./assets/CV-Janmanpreet_Singh_en.pdf" download = "cv_janmanpreet">Cv</a></li>
+        <li class="liClickEffect"><a href="#about">About</a></li>
+        <li class="liClickEffect"><a href="#experience">Experience</a></li>
+        <li class="liClickEffect"><a href="#contact">Contact</a></li>
+        <li class="liClickEffect"><a href="./assets/CV-Janmanpreet_Singh_en.pdf" download="cv_janmanpreet">Cv</a></li>
       </ul>
     </div>
   </header>
@@ -59,7 +72,7 @@
     </div>
   </div>
 
-  <div class="about wrapper" id="aboutWrapper">
+  <div class="about wrapper" id="about">
     <div class="about--text">
       <h2 class="about--text__title"></h2>
       <p class="about--text__paragraph">
@@ -99,11 +112,11 @@
     </div>
   </div>
 
-  <div class="experiences section wrapper" id="experiencesWrapper">
+  <div class="experiences section wrapper" id="experience">
     <h1 class="experiences--title">Experiences</h1>
   </div>
 
-  <div class="contact wrapper" id="contactWrapper">
+  <div class="contact wrapper" id="contact">
     <h1 class="contactTitle">Contact me!</h1>
     <div class="contactContainer">
       <ul class="contactContainer--social">
@@ -122,7 +135,8 @@
             </div>
           </div>
           <div class="form--field">
-            <textarea class="form--field__input" required name="message" type="text"></textarea>
+            <label class="form--field__label" for="formMessage">Message</label>
+            <textarea class="form--field__input" required name="message" id="formMessage" type="text"></textarea>
           </div>
         </div>
         <input class="form--btn" type="submit" value="Send"></input>
@@ -146,7 +160,7 @@
     </div>
     <div class="footer">
       <div class="footerWrapper">
-        <p class="footer--text">Version 1.0.3</p>
+        <p class="footer--text">Version 1.0.4</p>
         <p class="footer--text">This website was designed and created by <br> Janmanpreet Singh</p>
         <p class="footer--text">Some icons were taken from
           <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a>,
