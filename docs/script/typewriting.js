@@ -13,13 +13,14 @@ both personally and professionally.`;
 //check if the title is written
 let isTitle = false;
 let isVisible = false;
+let scrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
   if(isTitle === false) {
     typeWriter();
   }
-
-  const scrollY = window.scrollY;
+  
+  scrollY = window.scrollY;
   if (scrollY > 620) {
     isVisible = true;
   }

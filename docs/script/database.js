@@ -86,9 +86,9 @@ export const job = [
 //social db
 export const socials = [
     {
-        name: "Email",
-        src: `${socialIconPath}gmail.png`,
-        href: "https://mail.google.com/"
+        name: "Github",
+        src: `${socialIconPath}github.png`,
+        href: "https://github.com/Erodot0"
     },
     {
         name: "Linkedin",
