@@ -5,6 +5,9 @@ const speed = 50;
 //About typewriting
 const titleHtml = document.querySelector('.about--text__title');
 const paragraphHtml = document.querySelector('.about--text__paragraph');
+const prefersReducedMotion = window.matchMedia(
+  '(prefers-reduced-motion: reduce)'
+).matches;
 
 //text to write
 const title = `Hello, there!`;
@@ -16,16 +19,21 @@ let isTitle = false;
 let isVisible = false;
 let scrollY = window.scrollY;
 
-window.addEventListener('scroll', () => {
-  if (isTitle === false) {
-    typeWriter();
-  }
+if (prefersReducedMotion) {
+  titleHtml.textContent = title;
+  paragraphHtml.textContent = txt;
+} else {
+  window.addEventListener('scroll', () => {
+    if (isTitle === false) {
+      typeWriter();
+    }
 
-  scrollY = window.scrollY;
-  if (scrollY > 620) {
-    isVisible = true;
-  }
-});
+    scrollY = window.scrollY;
+    if (scrollY > 620) {
+      isVisible = true;
+    }
+  });
+}
 
 function typeWriter() {
   if (i < title.length && isTitle === false && isVisible === true) {
