@@ -17,6 +17,17 @@ a:active {
   color: white;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
 h1 {
   font-size: 42px;
   font-family: 'Cutive Mono', monospace;
@@ -95,12 +106,13 @@ body {
         }
       }
 
-      //hover effecet
-      &:hover {
-        span {
-          width: 32px;
+        //hover and focus effects
+        &:hover,
+        &:focus-visible {
+          span {
+            width: 32px;
+          }
         }
-      }
     }
 
     .hamburgerClickEffect {
@@ -449,7 +461,7 @@ body {
             transition: 0.001s ease-in-out;
 
             &:focus {
-              outline: 0;
+              outline: 2px solid #000;
             }
           }
 

@@ -37,6 +37,8 @@ menu.addEventListener('click', () => {
   // Toggle the menu and hamburger click effects
   menuList.classList.toggle('menuClickEffect');
   menu.classList.toggle('hamburgerClickEffect');
+  const expanded = menu.getAttribute('aria-expanded') === 'true';
+  menu.setAttribute('aria-expanded', String(!expanded));
 
   // Select all list items in the menu list and toggle their click effects
   const menuChildren = menuList.querySelectorAll('.liClickEffect');
@@ -61,6 +63,7 @@ listItems.forEach((item) => {
     // Toggle the menu and hamburger click effects
     menuList.classList.toggle('menuClickEffect');
     menu.classList.toggle('hamburgerClickEffect');
+    menu.setAttribute('aria-expanded', 'false');
 
     // Select all list items in the menu list and toggle their click effects
     const menuChildren = menuList.querySelectorAll('.liClickEffect');

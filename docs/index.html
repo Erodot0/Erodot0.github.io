@@ -55,12 +55,17 @@
   <body>
     <header class="navbar" id="navbar">
       <a href="#navbar" class="navbar--logo"> JS </a>
-      <div class="navbar--menu">
-        <div class="navbar--menu__hamburger">
+      <nav class="navbar--menu">
+        <button
+          class="navbar--menu__hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          type="button"
+        >
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
         <ul class="navbar--menu__list menuClickEffect">
           <li class="liClickEffect"><a href="#about">About</a></li>
           <li class="liClickEffect"><a href="#experience">Experience</a></li>
@@ -82,74 +87,83 @@
             >
           </li>
         </ul>
-      </div>
+      </nav>
     </header>
 
-    <!-- main -->
-    <div class="main wrapper" id="heroWrapper">
-      <div class="main--text">
-        <h1 class="main--text__title">
-          Backend/Full-Stack Developer — Go • Fiber • Postgres
-        </h1>
-        <p class="main--text__paragraph">
-          I build fast, reliable web apps for startups and small teams.
-        </p>
-        <div class="main--cta">
-          <a class="cta-btn" href="#projects">View Projects</a>
-          <a
-            class="cta-btn"
-            href="./assets/CV-Janmanpreet_Singh_en.pdf"
-            download="cv_janmanpreet"
-            >Download CV</a
-          >
+    <main>
+      <section class="main wrapper" id="heroWrapper">
+        <div class="main--text">
+          <h1 class="main--text__title">
+            Backend/Full-Stack Developer — Go • Fiber • Postgres
+          </h1>
+          <p class="main--text__paragraph">
+            I build fast, reliable web apps for startups and small teams.
+          </p>
+          <div class="main--cta">
+            <a class="cta-btn" href="#projects">View Projects</a>
+            <a
+              class="cta-btn"
+              href="./assets/CV-Janmanpreet_Singh_en.pdf"
+              download="cv_janmanpreet"
+              >Download CV</a
+            >
+          </div>
         </div>
-      </div>
-      <div class="main--media">
-        <img class="main--media__img1" src="./assets/images/img1.jpg" alt="" />
-      </div>
-    </div>
+        <div class="main--media">
+          <img
+            class="main--media__img1"
+            src="./assets/images/img1.jpg"
+            alt="Developer working at a computer"
+          />
+        </div>
+      </section>
 
-    <div class="about wrapper" id="about">
-      <div class="about--text">
-        <h2 class="about--text__title"></h2>
-        <p class="about--text__paragraph"></p>
-      </div>
-      <div class="about--media">
-        <img class="about--media__img" src="./assets/images/img2.jpg" alt="" />
-      </div>
-    </div>
-    <div class="projects wrapper" id="projects">
-      <h1 class="projects--title">Projects</h1>
-      <div class="projects--container"></div>
-    </div>
+      <section class="about wrapper" id="about">
+        <div class="about--text">
+          <h2 class="about--text__title"></h2>
+          <p class="about--text__paragraph"></p>
+        </div>
+        <div class="about--media">
+          <img
+            class="about--media__img"
+            src="./assets/images/img2.jpg"
+            alt="Janmanpreet smiling"
+          />
+        </div>
+      </section>
 
-    <div class="skills wrapper" id="skills">
-      <h1 class="skills--title">Skills</h1>
-      <div class="skillCategory">
-        <h2>Core</h2>
-        <ul id="coreSkills"></ul>
-      </div>
-      <div class="skillCategory">
-        <h2>Used</h2>
-        <ul id="usedSkills"></ul>
-      </div>
-      <div class="skillCategory">
-        <h2>Learning</h2>
-        <ul id="learningSkills"></ul>
-      </div>
-    </div>
+      <section class="projects wrapper" id="projects">
+        <h2 class="projects--title">Projects</h2>
+        <div class="projects--container"></div>
+      </section>
 
-    <div class="experiences section wrapper" id="experience">
-      <h1 class="experiences--title">Experiences</h1>
-    </div>
+      <section class="skills wrapper" id="skills">
+        <h2 class="skills--title">Skills</h2>
+        <div class="skillCategory">
+          <h2>Core</h2>
+          <ul id="coreSkills"></ul>
+        </div>
+        <div class="skillCategory">
+          <h2>Used</h2>
+          <ul id="usedSkills"></ul>
+        </div>
+        <div class="skillCategory">
+          <h2>Learning</h2>
+          <ul id="learningSkills"></ul>
+        </div>
+      </section>
 
-    <div class="contact wrapper" id="contact">
-      <h1 class="contactTitle">Contact me!</h1>
-      <p class="contactSubtitle">
-        Available for remote work (CET) in English and Italian.
-      </p>
-      <div class="contactContainer">
-        <ul class="contactContainer--social"></ul>
+      <section class="experiences section wrapper" id="experience">
+        <h2 class="experiences--title">Experiences</h2>
+      </section>
+
+      <section class="contact wrapper" id="contact">
+        <h2 class="contactTitle">Contact me!</h2>
+        <p class="contactSubtitle">
+          Available for remote work (CET) in English and Italian.
+        </p>
+        <div class="contactContainer">
+          <ul class="contactContainer--social"></ul>
 
         <form class="form-wrapper" id="contact-form">
           <div class="form">
@@ -192,12 +206,17 @@
           <div class="emailSentWRapper">
             <h3 class="emailSentWRapper--title"></h3>
             <div class="emailSentWRapper--media">
-              <img class="emailSentWRapper--media__img" src="" />
+              <img
+                class="emailSentWRapper--media__img"
+                src=""
+                alt="Status icon"
+              />
             </div>
           </div>
         </form>
       </div>
-    </div>
+      </section>
+    </main>
 
     <footer>
       <div class="waveWrapper">
