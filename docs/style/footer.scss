@@ -1,44 +1,36 @@
 footer {
-    width: 100%;
-    margin-top: 20px;
-
-    svg {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .footer {
-        background-color: black;
-        width: 100%;
-        
-        .footerWrapper {
-            max-width: 1440px;
-            padding: 50px 5%;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            text-align: center;
-            align-items: center;
-        }
-
-        &--text {
-            color: white;
-            max-width: 300px;
-        }
-    }
+  width: 100%;
+  margin-top: 20px;
+}
+footer svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+footer .footer {
+  background-color: var(--color-primary);
+  width: 100%;
+}
+footer .footer .footerWrapper {
+  max-width: 1440px;
+  padding: var(--space-32) 5%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  text-align: center;
+  align-items: center;
+}
+footer .footer--text {
+  color: #fff;
+  max-width: 300px;
 }
 
-@media screen and (min-width:992px) {
-    footer {
-        .footer {
-            .footerWrapper {
-                margin: auto;
-                display: grid;
-                justify-content: center;
-                align-items: center;
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-    }
-}
+@media screen and (min-width: 992px) {
+  footer .footer .footerWrapper {
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}/*# sourceMappingURL=footer.css.map */
