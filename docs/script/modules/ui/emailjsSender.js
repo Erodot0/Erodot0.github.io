@@ -57,13 +57,13 @@ function resetForm(status) {
 
   // If the email has been successfully sent
   if (status === 'sent') {
-    sentTitle.innerHTML = 'Email Sent!';
+    sentTitle.textContent = 'Email Sent!';
     sentTitle.style.color = '#90EE90';
     sentImg.src = './assets/images/check.png';
     sentImg.alt = 'Email sent icon';
   } // If there was an error sending the email
   else {
-    sentTitle.innerHTML = 'Error';
+    sentTitle.textContent = 'Error';
     sentTitle.style.color = '#d13636';
     sentImg.src = './assets/images/cross.png';
     sentImg.alt = 'Email error icon';

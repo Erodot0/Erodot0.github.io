@@ -23,9 +23,197 @@
     <meta name="og:url" content="https://www.janmanpreet.com/" />
     <meta name="og:site_name" content="Janmanpreet" />
     <meta name="og:type" content="website" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-sans: 'Inter', sans-serif;
+        --font-title: 'Space Grotesk', sans-serif;
+        --fs-12: 0.75rem;
+        --fs-14: 0.875rem;
+        --fs-16: 1rem;
+        --fs-20: 1.25rem;
+        --fs-24: 1.5rem;
+        --fs-32: 2rem;
+        --fs-48: 3rem;
+        --space-4: 4px;
+        --space-8: 8px;
+        --space-12: 12px;
+        --space-16: 16px;
+        --space-24: 24px;
+        --space-32: 32px;
+        --color-primary: #264653;
+        --color-accent: #e76f51;
+        --color-bg: #ffffff;
+        --color-text: #1a1a1a;
+        --color-neutral-100: #f8f9fa;
+        --color-neutral-300: #dee2e6;
+        --color-neutral-600: #6c757d;
+        --color-neutral-900: #212529;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --color-bg: #121212;
+          --color-text: #f8f9fa;
+          --color-neutral-100: #1e1e1e;
+          --color-neutral-300: #343a40;
+          --color-neutral-600: #adb5bd;
+          --color-neutral-900: #f8f9fa;
+        }
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      body {
+        scroll-behavior: smooth;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        font-family: var(--font-sans);
+        font-size: var(--fs-16);
+      }
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        text-decoration: none;
+        color: var(--color-primary);
+      }
+      button {
+        background: none;
+        border: none;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-title);
+      }
+      h1 {
+        font-size: var(--fs-48);
+      }
+      h2 {
+        font-size: var(--fs-32);
+      }
+      h3 {
+        font-size: var(--fs-24);
+      }
+      p {
+        font-size: var(--fs-16);
+      }
+      .wrapper {
+        max-width: 1440px;
+        padding: 100px 6% 30px;
+        margin: auto;
+      }
+      .navbar {
+        background-color: var(--color-bg);
+        width: 100%;
+        padding: var(--space-8) var(--space-16);
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .navbar--logo {
+        font-size: var(--fs-24);
+        background-color: var(--color-primary);
+        border-radius: 50%;
+        color: #fff;
+        width: 37px;
+        height: 37px;
+        padding: var(--space-4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .navbar--menu {
+        width: 32px;
+        height: 20px;
+      }
+      .navbar--menu__hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        cursor: pointer;
+      }
+      .navbar--menu__hamburger span {
+        display: block;
+        background-color: var(--color-text);
+        height: 3px;
+        width: 80%;
+        transition: 0.3s ease-in-out;
+      }
+      .navbar--menu__hamburger span:nth-child(even) {
+        align-self: flex-end;
+      }
+      .navbar--menu__hamburger:hover span,
+      .navbar--menu__hamburger:focus-visible span {
+        width: 32px;
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .main--text {
+        max-width: 400px;
+      }
+      .main--text__title {
+        font-weight: bold;
+      }
+      .main--media {
+        width: 100%;
+        max-width: 500px;
+      }
+      .main--media__img1 {
+        width: 100%;
+        height: auto;
+      }
+      .main--cta {
+        margin-top: var(--space-16);
+        display: flex;
+        gap: var(--space-16);
+      }
+      .btn {
+        display: inline-block;
+        padding: var(--space-8) var(--space-16);
+        border-radius: var(--space-4);
+        font-size: var(--fs-14);
+        font-family: var(--font-sans);
+        font-weight: 600;
+      }
+      .btn--solid {
+        background-color: var(--color-primary);
+        color: #fff;
+      }
+      .btn--ghost {
+        border: 1px solid var(--color-primary);
+        color: var(--color-primary);
+      }
+    </style>
     <!-- style -->
-    <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href="./style/footer.css" />
+    <link rel="stylesheet" href="./style/style.min.css" />
+    <link rel="stylesheet" href="./style/footer.min.css" />
     <!-- scripts -->
     <script type="module" src="./script/modules/ui/typewriting.js"></script>
     <script type="module" src="./script/modules/ui/navHandler.js"></script>
@@ -110,11 +298,17 @@
           </div>
         </div>
         <div class="main--media">
-          <img
-            class="main--media__img1"
-            src="https://placehold.co/600x400?text=Task+Tracker"
-            alt="Screenshot of Task Tracker project"
-          />
+          <picture>
+            <source
+              srcset="https://placehold.co/300x200?text=Task+Tracker"
+              media="(max-width: 600px)"
+            />
+            <img
+              class="main--media__img1"
+              src="https://placehold.co/600x400?text=Task+Tracker"
+              alt="Screenshot of Task Tracker project"
+            />
+          </picture>
         </div>
       </section>
 
@@ -124,11 +318,17 @@
           <p class="about--text__paragraph"></p>
         </div>
         <div class="about--media">
-          <img
-            class="about--media__img"
-            src="https://placehold.co/400x400?text=Janmanpreet"
-            alt="Janmanpreet smiling"
-          />
+          <picture>
+            <source
+              srcset="https://placehold.co/200x200?text=Janmanpreet"
+              media="(max-width: 600px)"
+            />
+            <img
+              class="about--media__img"
+              src="https://placehold.co/400x400?text=Janmanpreet"
+              alt="Janmanpreet smiling"
+            />
+          </picture>
         </div>
       </section>
 
