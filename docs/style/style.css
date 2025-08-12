@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -16,17 +15,17 @@ a:active {
 
 h1 {
   font-size: 42px;
-  font-family: "Cutive Mono", monospace;
+  font-family: "Poppins", sans-serif;
 }
 
 h2 {
   font-size: 32px;
-  font-family: "Cutive Mono", monospace;
+  font-family: "Poppins", sans-serif;
 }
 
 p {
   font-size: 20px;
-  font-family: "Tilt Neon", cursive;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -40,11 +39,13 @@ body {
 
 .wrapper {
   max-width: 1440px;
+  min-height: 100vh;
   padding: 100px 6% 30px;
   margin: auto;
 }
 
 .navbar {
+  position: absolute;
   background-color: white;
   width: 88%;
   padding: 15px 6%;
@@ -71,6 +72,7 @@ body {
 .navbar--menu {
   width: 32px;
   height: 20px;
+  margin-left: auto;
 }
 .navbar--menu__hamburger {
   display: flex;
@@ -160,7 +162,7 @@ body {
 }
 .main--media {
   width: 100%;
-  max-width: 500px;
+  max-width: 250px;
 }
 .main--media__img1 {
   width: 100%;
@@ -421,6 +423,7 @@ body {
   .navbar--menu {
     width: auto;
     height: auto;
+    margin-right: auto;
   }
   .navbar--menu__hamburger {
     display: none;

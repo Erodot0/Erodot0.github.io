@@ -1,6 +1,5 @@
 // font import
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 //reset
 * {
@@ -19,17 +18,17 @@ a:active {
 
 h1 {
     font-size: 42px;
-    font-family: 'Cutive Mono', monospace;
+    font-family: "Poppins", sans-serif;
 }
 
 h2 {
     font-size: 32px;
-    font-family: 'Cutive Mono', monospace;
+    font-family: "Poppins", sans-serif;
 }
 
 p {
     font-size: 20px;
-    font-family: 'Tilt Neon', cursive;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -44,11 +43,13 @@ body {
 // style
 .wrapper {
     max-width: 1440px;
+    min-height: 100vh;
     padding: 100px 6% 30px;
     margin: auto;
 }
 
 .navbar {
+    position: absolute;
     background-color: white;
     width: 88%;
     padding: 15px 6%;
@@ -76,6 +77,7 @@ body {
     &--menu {
         width: 32px;
         height: 20px;
+        margin-left: auto;
 
         &__hamburger {
             display: flex;
@@ -193,7 +195,7 @@ body {
 
     &--media {
         width: 100%;
-        max-width: 500px;
+        max-width: 250px;
 
         &__img1 {
             width: 100%;
@@ -509,6 +511,7 @@ body {
         &--menu {
             width: auto;
             height: auto;
+            margin-right: auto;
 
             &__hamburger {
                 display: none;
