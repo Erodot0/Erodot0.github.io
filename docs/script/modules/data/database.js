@@ -1,6 +1,4 @@
 'use strict';
-//job img path
-const jobIconPath = './assets/images/';
 //social icon path
 const socialIconPath = './assets/images/social-icon/';
 
@@ -39,6 +37,7 @@ export const projects = [
     github: 'https://github.com/Erodot0/task-tracker',
     live: 'https://task-tracker.example.com',
     outcome: '-30% reporting time',
+    img: 'https://placehold.co/600x400?text=Task+Tracker',
   },
   {
     title: 'Portfolio Builder',
@@ -48,6 +47,7 @@ export const projects = [
     github: 'https://github.com/Erodot0/portfolio-builder',
     live: 'https://portfolio-builder.example.com',
     outcome: '50% faster load times',
+    img: 'https://placehold.co/600x400?text=Portfolio+Builder',
   },
   {
     title: 'IoT Energy Dashboard',
@@ -57,6 +57,7 @@ export const projects = [
     github: 'https://github.com/Erodot0/iot-energy-dashboard',
     live: 'https://energy.example.com',
     outcome: '-15% energy consumption',
+    img: 'https://placehold.co/600x400?text=IoT+Dashboard',
   },
 ];
 
@@ -66,7 +67,7 @@ export const job = [
     company: 'Develhope',
     role: 'Junior Full Stack Web Developer',
     period: '2022',
-    src: `${jobIconPath}develhope.jpg`,
+    src: 'https://placehold.co/80x80?text=Develhope',
     alt: 'Develhope logo',
     summary:
       'Internship progressing from frontend to backend, delivering production web app as team lead.',
@@ -80,7 +81,7 @@ export const job = [
     company: 'Kodland',
     role: 'Web Developing Tutor',
     period: '2023–Present',
-    src: `${jobIconPath}kodland.jpg`,
+    src: 'https://placehold.co/80x80?text=Kodland',
     alt: 'Kodland logo',
     summary:
       'Teach coding fundamentals to young students in live online classes.',

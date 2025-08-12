@@ -1,9 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700&display=swap');
+
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-title: 'Space Grotesk', sans-serif;
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-32: 2rem;
+  --fs-48: 3rem;
+
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  --color-primary: #264653;
+  --color-accent: #e76f51;
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-neutral-100: #f8f9fa;
+  --color-neutral-300: #dee2e6;
+  --color-neutral-600: #6c757d;
+  --color-neutral-900: #212529;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #121212;
+    --color-text: #f8f9fa;
+    --color-neutral-100: #1e1e1e;
+    --color-neutral-300: #343a40;
+    --color-neutral-600: #adb5bd;
+    --color-neutral-900: #f8f9fa;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--fs-16);
 }
 
 a:link,
@@ -11,7 +58,7 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
-  color: white;
+  color: var(--color-primary);
 }
 
 button {
@@ -21,27 +68,33 @@ button {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #000;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+}
+
 h1 {
-  font-size: 42px;
-  font-family: 'Cutive Mono', monospace;
+  font-size: var(--fs-48);
 }
 
 h2 {
-  font-size: 32px;
-  font-family: 'Cutive Mono', monospace;
+  font-size: var(--fs-32);
+}
+
+h3 {
+  font-size: var(--fs-24);
 }
 
 p {
-  font-size: 20px;
-  font-family: 'Tilt Neon', cursive;
-}
-
-body {
-  scroll-behavior: smooth;
+  font-size: var(--fs-16);
 }
 
 .bodyScrollDisabled {
@@ -56,24 +109,27 @@ body {
 }
 
 .navbar {
-  background-color: white;
-  width: 88%;
-  padding: 15px 6%;
+  background-color: var(--color-bg);
+  width: 100%;
+  padding: var(--space-8) var(--space-16);
   height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
   z-index: 99;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .navbar--logo {
-  font-size: 24px;
-  background-color: black;
+  font-size: var(--fs-24);
+  background-color: var(--color-primary);
   border-radius: 50%;
-  color: white;
+  color: #fff;
   width: 37px;
   height: 37px;
-  padding: 5px;
+  padding: var(--space-4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,12 +142,12 @@ body {
 .navbar--menu__hamburger {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: var(--space-4);
   cursor: pointer;
 }
 .navbar--menu__hamburger span {
   display: block;
-  background-color: black;
+  background-color: var(--color-text);
   height: 3px;
   width: 80%;
   transition: 0.3s ease-in-out;
@@ -108,7 +164,7 @@ body {
   z-index: 99;
 }
 .navbar--menu .hamburgerClickEffect span {
-  background-color: white;
+  background-color: var(--color-bg);
   position: fixed;
 }
 .navbar--menu .hamburgerClickEffect span:nth-child(even) {
@@ -241,7 +297,7 @@ body {
   padding-top: 36px;
   padding-bottom: 64px;
   border-radius: 10px;
-  background-color: white;
+  background-color: var(--color-neutral-100);
 }
 .experiences .experience--media {
   width: 100%;
@@ -293,9 +349,9 @@ body {
   justify-content: left;
   align-items: center;
   gap: 1.5rem;
-  font-size: 24px;
-  font-family: 'Tilt Neon', cursive;
-  color: black;
+  font-size: var(--fs-24);
+  font-family: var(--font-sans);
+  color: var(--color-text);
 }
 .contact .contactContainer--social__item a .socialIcon {
   width: 40px;
@@ -325,7 +381,7 @@ body {
 }
 .contact .contactContainer .form-wrapper .form--field__label {
   position: absolute;
-  font-family: 'Tilt Neon', cursive;
+  font-family: var(--font-sans);
   font-size: 20px;
   top: 10px;
   left: 16px;
@@ -333,13 +389,13 @@ body {
   transition: 0.3s ease-in-out;
 }
 .contact .contactContainer .form-wrapper .form--field__input {
-  color: black;
-  padding: 10px 15px;
-  font-size: 20px;
-  font-family: 'Tilt Neon', cursive;
-  border-radius: 15px;
+  color: var(--color-text);
+  padding: var(--space-8) var(--space-12);
+  font-size: var(--fs-20);
+  font-family: var(--font-sans);
+  border-radius: var(--space-16);
   transition: 0.3s ease-in-out;
-  border: 1px solid #c6c6cd;
+  border: 1px solid var(--color-neutral-300);
   transition: 0.001s ease-in-out;
 }
 .contact .contactContainer .form-wrapper .form--field__input:focus {
@@ -354,15 +410,15 @@ body {
 }
 .contact .contactContainer .form-wrapper .form--btn {
   all: unset;
-  font-family: 'Tilt Neon', cursive;
+  font-family: var(--font-sans);
   font-size: 20px;
   max-width: 200px;
   width: 60%;
   padding: 10px 15px;
   border-radius: 15px;
-  border: 1px solid black;
-  background-color: black;
-  color: white;
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: #fff;
   text-align: center;
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -394,7 +450,7 @@ body {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   color: #90ee90;
-  font-family: 'Tilt Neon', cursive;
+  font-family: var(--font-sans);
 }
 .contact .contactContainer .formBlur .emailSentWRapper--media {
   width: 100%;
@@ -441,7 +497,7 @@ body {
     all: unset;
     position: static;
     background-color: rgba(255, 255, 255, 0);
-    color: black;
+    color: var(--color-text);
     display: flex;
     gap: 40px;
   }
@@ -449,17 +505,17 @@ body {
     padding: 5px 10px;
   }
   .navbar--menu__list li a {
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    color: black;
+    font-size: var(--fs-20);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: var(--color-text);
   }
   .navbar--menu__list li::after {
     display: block;
     content: '';
     width: 0%;
     height: 2px;
-    background-color: black;
+    background-color: var(--color-primary);
     transition: 0.3s ease-in-out;
   }
   .navbar--menu__list li:hover::after {
@@ -642,49 +698,80 @@ body {
   }
 }
 .main--cta {
-  margin-top: 20px;
+  margin-top: var(--space-16);
   display: flex;
-  gap: 20px;
+  gap: var(--space-16);
 }
-.cta-btn {
-  padding: 10px 20px;
-  background-color: #000;
+.btn {
+  display: inline-block;
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--space-4);
+  font-size: var(--fs-14);
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+.btn--solid {
+  background-color: var(--color-primary);
   color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
+}
+.btn--solid:hover {
+  background-color: var(--color-accent);
+}
+.btn--ghost {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+.btn--ghost:hover {
+  background-color: var(--color-neutral-100);
 }
 .projects--container,
 .skills {
-  margin-top: 40px;
+  margin-top: var(--space-32);
+}
+.projects--container {
+  display: grid;
+  gap: var(--space-24);
 }
 .skillCategory {
-  margin-bottom: 20px;
+  margin-bottom: var(--space-24);
 }
 .skillCategory ul li {
-  margin: 5px 0;
+  margin: var(--space-4) 0;
 }
 .contactSubtitle {
-  margin-top: -40px;
-  margin-bottom: 40px;
+  margin-top: calc(var(--space-32) * -1);
+  margin-bottom: var(--space-32);
 }
 .footer--social {
-  margin-top: 20px;
+  margin-top: var(--space-24);
   display: flex;
-  gap: 20px;
+  gap: var(--space-24);
   justify-content: center;
 }
 .project {
-  margin-bottom: 20px;
+  background-color: var(--color-neutral-100);
+  border-radius: var(--space-8);
+  padding: var(--space-16);
+  margin-bottom: var(--space-24);
+}
+.project--image {
+  width: 100%;
+  border-radius: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+.project--stack {
+  margin: var(--space-12) 0;
 }
 .badge {
-  background-color: #eee;
-  border-radius: 4px;
-  padding: 2px 6px;
-  margin-right: 5px;
-  font-size: 0.8rem;
+  background-color: var(--color-primary);
+  border-radius: var(--space-4);
+  padding: 0 var(--space-8);
+  margin-right: var(--space-8);
+  color: #fff;
+  font-size: var(--fs-14);
 }
 .project--links a {
-  margin-right: 10px;
+  margin-right: var(--space-8);
 }
 .experience--txt__list {
   list-style: disc;
