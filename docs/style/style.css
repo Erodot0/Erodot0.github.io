@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -16,17 +16,17 @@ a:active {
 
 h1 {
   font-size: 42px;
-  font-family: "Cutive Mono", monospace;
+  font-family: 'Cutive Mono', monospace;
 }
 
 h2 {
   font-size: 32px;
-  font-family: "Cutive Mono", monospace;
+  font-family: 'Cutive Mono', monospace;
 }
 
 p {
   font-size: 20px;
-  font-family: "Tilt Neon", cursive;
+  font-family: 'Tilt Neon', cursive;
 }
 
 body {
@@ -282,7 +282,7 @@ body {
   align-items: center;
   gap: 1.5rem;
   font-size: 24px;
-  font-family: "Tilt Neon", cursive;
+  font-family: 'Tilt Neon', cursive;
   color: black;
 }
 .contact .contactContainer--social__item a .socialIcon {
@@ -313,7 +313,7 @@ body {
 }
 .contact .contactContainer .form-wrapper .form--field__label {
   position: absolute;
-  font-family: "Tilt Neon", cursive;
+  font-family: 'Tilt Neon', cursive;
   font-size: 20px;
   top: 10px;
   left: 16px;
@@ -324,7 +324,7 @@ body {
   color: black;
   padding: 10px 15px;
   font-size: 20px;
-  font-family: "Tilt Neon", cursive;
+  font-family: 'Tilt Neon', cursive;
   border-radius: 15px;
   transition: 0.3s ease-in-out;
   border: 1px solid #c6c6cd;
@@ -338,11 +338,11 @@ body {
   top: -20px;
 }
 .contact .contactContainer .form-wrapper .form--field .textAreaEffect {
-  border: #90EE90 1px solid;
+  border: #90ee90 1px solid;
 }
 .contact .contactContainer .form-wrapper .form--btn {
   all: unset;
-  font-family: "Tilt Neon", cursive;
+  font-family: 'Tilt Neon', cursive;
   font-size: 20px;
   max-width: 200px;
   width: 60%;
@@ -356,8 +356,8 @@ body {
   transition: 0.3s ease-in-out;
 }
 .contact .contactContainer .form-wrapper .formBtnEffect {
-  background-color: #90EE90;
-  border: #90EE90 1px solid;
+  background-color: #90ee90;
+  border: #90ee90 1px solid;
 }
 .contact .contactContainer .form-wrapper .emailSentWRapper {
   height: 0%;
@@ -380,9 +380,9 @@ body {
   align-content: center;
   background-color: rgba(255, 255, 255, 0.1607843137);
   -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  color: #90EE90;
-  font-family: "Tilt Neon", cursive;
+  backdrop-filter: blur(5px);
+  color: #90ee90;
+  font-family: 'Tilt Neon', cursive;
 }
 .contact .contactContainer .formBlur .emailSentWRapper--media {
   width: 100%;
@@ -438,13 +438,13 @@ body {
   }
   .navbar--menu__list li a {
     font-size: 20px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     color: black;
   }
   .navbar--menu__list li::after {
     display: block;
-    content: "";
+    content: '';
     width: 0%;
     height: 2px;
     background-color: black;
@@ -504,7 +504,10 @@ body {
     padding: 15px 20px;
     font-size: 42px;
     border-radius: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
   .skillPc .skillWrapper {
     height: auto;
@@ -538,7 +541,10 @@ body {
     display: block;
   }
   .skillPc .skillWrapper:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     transform: translateY(-20px);
   }
   .experiences--title {
@@ -547,7 +553,10 @@ body {
   }
   .experiences .experience {
     margin-bottom: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     padding: 48px;
   }
   .experiences .experience--content {
@@ -619,4 +628,54 @@ body {
     width: 215px;
     transition: 0.3s ease-in-out;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+.main--cta {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.cta-btn {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.projects--container,
+.skills {
+  margin-top: 40px;
+}
+.skillCategory {
+  margin-bottom: 20px;
+}
+.skillCategory ul li {
+  margin: 5px 0;
+}
+.contactSubtitle {
+  margin-top: -40px;
+  margin-bottom: 40px;
+}
+.footer--social {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.project {
+  margin-bottom: 20px;
+}
+.badge {
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+.project--links a {
+  margin-right: 10px;
+}
+.experience--txt__list {
+  list-style: disc;
+  margin-left: 20px;
+}
+/*# sourceMappingURL=style.css.map */

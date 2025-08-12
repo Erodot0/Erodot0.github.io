@@ -28,10 +28,6 @@
     <link rel="stylesheet" href="./style/footer.css" />
     <!-- scripts -->
     <script type="module" src="./script/modules/ui/typewriting.js"></script>
-    <script
-      type="module"
-      src="./script/modules/ui/skillCarouselScroll.js"
-    ></script>
     <script type="module" src="./script/modules/ui/navHandler.js"></script>
     <script type="module" src="./script/modules/ui/contactEffect.js"></script>
     <script type="module" src="./script/modules/ui/emailjsSender.js"></script>
@@ -39,6 +35,10 @@
     <script
       type="module"
       src="./script/modules/ui/experienceInjector.js"
+    ></script>
+    <script
+      type="module"
+      src="./script/modules/ui/projectsInjector.js"
     ></script>
     <script type="module" src="./script/modules/ui/skillInjector.js"></script>
     <script
@@ -64,12 +64,21 @@
         <ul class="navbar--menu__list menuClickEffect">
           <li class="liClickEffect"><a href="#about">About</a></li>
           <li class="liClickEffect"><a href="#experience">Experience</a></li>
+          <li class="liClickEffect"><a href="#projects">Projects</a></li>
           <li class="liClickEffect"><a href="#contact">Contact</a></li>
           <li class="liClickEffect">
             <a
               href="./assets/CV-Janmanpreet_Singh_en.pdf"
               download="cv_janmanpreet"
-              >Cv</a
+              >CV</a
+            >
+          </li>
+          <li class="liClickEffect">
+            <a href="https://github.com/Erodot0" target="_blank">GitHub</a>
+          </li>
+          <li class="liClickEffect">
+            <a href="https://www.linkedin.com/in/janmanpreet/" target="_blank"
+              >LinkedIn</a
             >
           </li>
         </ul>
@@ -80,10 +89,20 @@
     <div class="main wrapper" id="heroWrapper">
       <div class="main--text">
         <h1 class="main--text__title">
-          I'm <br />
-          janmanpreet Singh
+          Backend/Full-Stack Developer — Go • Fiber • Postgres
         </h1>
-        <p class="main--text__paragraph"></p>
+        <p class="main--text__paragraph">
+          I build fast, reliable web apps for startups and small teams.
+        </p>
+        <div class="main--cta">
+          <a class="cta-btn" href="#projects">View Projects</a>
+          <a
+            class="cta-btn"
+            href="./assets/CV-Janmanpreet_Singh_en.pdf"
+            download="cv_janmanpreet"
+            >Download CV</a
+          >
+        </div>
       </div>
       <div class="main--media">
         <img class="main--media__img1" src="./assets/images/img1.jpg" alt="" />
@@ -98,33 +117,25 @@
       <div class="about--media">
         <img class="about--media__img" src="./assets/images/img2.jpg" alt="" />
       </div>
-      <!-- skills carousel -->
-      <div class="skills">
-        <div class="skills--text">
-          <h2 class="skills--text__title">Skills</h2>
-        </div>
-        <div class="skills--carousel">
-          <ul class="carousel--wrapper"></ul>
-        </div>
-      </div>
+    </div>
+    <div class="projects wrapper" id="projects">
+      <h1 class="projects--title">Projects</h1>
+      <div class="projects--container"></div>
     </div>
 
-    <!-- skill container for pc -->
-    <div class="skillPc wrapper">
-      <div class="skillWrapper">
-        <div class="skillWrapper--text">
-          <h2 class="skillWrapper--text__title">Learned</h2>
-        </div>
-        <div class="skillsPc" id="learnedSkills"></div>
+    <div class="skills wrapper" id="skills">
+      <h1 class="skills--title">Skills</h1>
+      <div class="skillCategory">
+        <h2>Core</h2>
+        <ul id="coreSkills"></ul>
       </div>
-      <div class="skillPc--title">
-        <h1>Skills</h1>
+      <div class="skillCategory">
+        <h2>Used</h2>
+        <ul id="usedSkills"></ul>
       </div>
-      <div class="skillWrapper">
-        <div class="skillWrapper--text">
-          <h2 class="skillWrapper--text__title">Learning</h2>
-        </div>
-        <div class="skillsPc" id="inProgress"></div>
+      <div class="skillCategory">
+        <h2>Learning</h2>
+        <ul id="learningSkills"></ul>
       </div>
     </div>
 
@@ -134,6 +145,9 @@
 
     <div class="contact wrapper" id="contact">
       <h1 class="contactTitle">Contact me!</h1>
+      <p class="contactSubtitle">
+        Available for remote work (CET) in English and Italian.
+      </p>
       <div class="contactContainer">
         <ul class="contactContainer--social"></ul>
 
@@ -174,7 +188,7 @@
               ></textarea>
             </div>
           </div>
-          <input class="form--btn" type="submit" value="Send" />
+          <input class="form--btn" type="submit" value="Send Message" />
           <div class="emailSentWRapper">
             <h3 class="emailSentWRapper--title"></h3>
             <div class="emailSentWRapper--media">
@@ -224,6 +238,12 @@
               >Blush</a
             >
           </p>
+          <div class="footer--social">
+            <a href="https://github.com/Erodot0" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/janmanpreet/" target="_blank"
+              >LinkedIn</a
+            >
+          </div>
         </div>
       </div>
     </footer>
