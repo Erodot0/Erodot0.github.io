@@ -264,6 +264,7 @@
       src="./script/modules/ui/projectsInjector.js"
     ></script>
     <script type="module" src="./script/modules/ui/skillInjector.js"></script>
+    <script type="module" src="./script/skillCarouselScroll.js"></script>
   </head>
 
   <body>
@@ -316,12 +317,7 @@
           </p>
           <div class="main--cta">
             <a class="btn btn--solid" href="#projects">View Projects</a>
-            <a
-              class="btn btn--ghost"
-              href="./assets/CV-Janmanpreet_Singh_en.pdf"
-              download="cv_janmanpreet"
-              >Download CV</a
-            >
+            <a class="btn btn--ghost" href="./assets/CV-Janmanpreet_Singh_en.pdf" download="cv_janmanpreet">Download CV</a>
           </div>
         </div>
         <div class="main--media">
@@ -366,6 +362,24 @@
 
       <section class="skills wrapper" id="skills">
         <h2 class="skills--title">Skills</h2>
+        <div class="skills--carousel">
+          <button class="skills--carousel__prev" aria-label="Previous">&#10094;</button>
+          <div class="carousel--wrapper">
+            <div class="carousel--wrapper__item"><img src="./assets/images/Skills-icon/html.png" alt="HTML logo" /></div>
+            <div class="carousel--wrapper__item"><img src="./assets/images/Skills-icon/css.png" alt="CSS logo" /></div>
+            <div class="carousel--wrapper__item"><img src="./assets/images/Skills-icon/javascript.png" alt="JavaScript logo" /></div>
+            <div class="carousel--wrapper__item"><img src="./assets/images/Skills-icon/react.png" alt="React logo" /></div>
+            <div class="carousel--wrapper__item"><img src="./assets/images/Skills-icon/nodejs.png" alt="Node.js logo" /></div>
+            <div class="carousel--wrapper__item"><img src="./assets/images/Skills-icon/typescript.png" alt="TypeScript logo" /></div>
+            <div class="carousel--wrapper__item"><img src="./assets/images/Skills-icon/python.png" alt="Python logo" /></div>
+            <div class="carousel--wrapper__item"><img src="./assets/images/Skills-icon/mysql.png" alt="MySQL logo" /></div>
+            <div class="carousel--wrapper__item"><img src="./assets/images/Skills-icon/git.png" alt="Git logo" /></div>
+            <div class="carousel--wrapper__item"><img src="./assets/images/Skills-icon/github.png" alt="GitHub logo" /></div>
+            <div class="carousel--wrapper__item"><img src="./assets/images/Skills-icon/figma.png" alt="Figma logo" /></div>
+            <div class="carousel--wrapper__item"><img src="./assets/images/Skills-icon/wordpress.png" alt="WordPress logo" /></div>
+          </div>
+          <button class="skills--carousel__next" aria-label="Next">&#10095;</button>
+        </div>
         <div class="skillCategory">
           <h2>Core</h2>
           <ul id="coreSkills"></ul>
@@ -427,7 +441,6 @@
                   required
                   name="message"
                   id="formMessage"
-                  type="text"
                 ></textarea>
               </div>
             </div>
@@ -459,6 +472,35 @@
         </div>
       </section>
     </main>
+
+    <template id="skill-template">
+      <li class="skillItem"></li>
+    </template>
+    <template id="experience-template">
+      <div class="experience">
+        <div class="experience--content">
+          <div class="experience--media">
+            <img class="experience--media__img" src="" alt="" />
+          </div>
+          <div class="experience--txt">
+            <p class="experience--txt__year"></p>
+            <h2 class="experience--txt__title"></h2>
+            <p class="experience--txt__description"></p>
+            <ul class="experience--txt__list"></ul>
+          </div>
+        </div>
+      </div>
+    </template>
+    <template id="social-template">
+      <li class="contactContainer--social__item">
+        <a target="_blank">
+          <div class="socialIcon">
+            <img src="" alt="" />
+          </div>
+          <span class="socialName"></span>
+        </a>
+      </li>
+    </template>
 
     <footer>
       <div class="waveWrapper">
