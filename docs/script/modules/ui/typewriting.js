@@ -1,9 +1,10 @@
+'use strict';
 let i = 0;
 const speed = 50;
 
 //About typewriting
-const titleHtml = document.querySelector(".about--text__title");
-const paragraphHtml = document.querySelector(".about--text__paragraph");
+const titleHtml = document.querySelector('.about--text__title');
+const paragraphHtml = document.querySelector('.about--text__paragraph');
 
 //text to write
 const title = `Hello, there!`;
@@ -15,11 +16,11 @@ let isTitle = false;
 let isVisible = false;
 let scrollY = window.scrollY;
 
-window.addEventListener("scroll", () => {
-  if(isTitle === false) {
+window.addEventListener('scroll', () => {
+  if (isTitle === false) {
     typeWriter();
   }
-  
+
   scrollY = window.scrollY;
   if (scrollY > 620) {
     isVisible = true;
