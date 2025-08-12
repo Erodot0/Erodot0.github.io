@@ -119,7 +119,7 @@ p {
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 10;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .navbar--logo {
@@ -159,29 +159,18 @@ p {
 .navbar--menu__hamburger:focus-visible span {
   width: 32px;
 }
-.navbar--menu .hamburgerClickEffect {
-  position: relative;
-  z-index: 99;
-}
-.navbar--menu .hamburgerClickEffect span {
-  background-color: var(--color-bg);
-  position: fixed;
-}
-.navbar--menu .hamburgerClickEffect span:nth-child(even) {
-  display: none;
-}
-.navbar--menu .hamburgerClickEffect span:nth-child(odd) {
+.navbar--menu__hamburger.open span {
   width: 32px;
+  background-color: var(--color-bg);
 }
-.navbar--menu .hamburgerClickEffect span:first-child {
-  position: absolute;
-  top: 5px;
-  transform: rotate(45deg);
+.navbar--menu__hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
 }
-.navbar--menu .hamburgerClickEffect span:last-child {
-  position: absolute;
-  top: 5px;
-  transform: rotate(-45deg);
+.navbar--menu__hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar--menu__hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 .navbar--menu__list {
   position: fixed;
@@ -189,7 +178,7 @@ p {
   height: 100vh;
   left: 0;
   top: 0;
-  z-index: 98;
+  z-index: 20;
   background-color: rgba(0, 0, 0, 0.672);
   color: white;
   display: flex;
@@ -198,21 +187,20 @@ p {
   justify-content: center;
   gap: 16px;
   font-size: 32px;
-  transform: translateY(0%);
-  transition: 0.3s ease-in-out;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
 }
 .navbar--menu__list li {
-  transform: translateY(0%);
-  opacity: 1;
-  transition: 0.3s ease-in-out;
-}
-.navbar--menu__list .liClickEffect {
-  position: fixed;
-  transform: translateY(-200%);
   opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-.navbar--menu .menuClickEffect {
-  transform: translateY(-100%);
+.navbar--menu__list.open {
+  transform: translateY(0);
+}
+.navbar--menu__list.open li {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .main {
@@ -520,14 +508,6 @@ p {
   }
   .navbar--menu__list li:hover::after {
     width: 100%;
-  }
-  .navbar--menu__list .liClickEffect {
-    position: static;
-    transform: translateY(0);
-    opacity: 1;
-  }
-  .navbar--menu .menuClickEffect {
-    transform: translateY(0);
   }
   .main {
     display: flex;
