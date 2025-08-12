@@ -1,8 +1,9 @@
+'use strict';
 // Get the HTML element that will contain the job experiences
-const experienceWrapper = document.querySelector(".experiences")
+const experienceWrapper = document.querySelector('.experiences');
 
 // Import the job data from an external module (not shown in this code snippet)
-import { job } from "./database.js";
+import { job } from '../data/database.js';
 
 // Loop through each job experience and create HTML code to display it
 job.forEach((experience) => {
@@ -22,5 +23,5 @@ job.forEach((experience) => {
   `;
 
   // Add the generated HTML code for the current job experience to the experienceWrapper element
-  experienceWrapper.innerHTML += code
+  experienceWrapper.innerHTML += code;
 });
