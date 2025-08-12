@@ -37,7 +37,7 @@ if (prefersReducedMotion) {
 
 function typeWriter() {
   if (i < title.length && isTitle === false && isVisible === true) {
-    titleHtml.innerHTML += title.charAt(i);
+    titleHtml.textContent += title.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
@@ -49,7 +49,7 @@ function typeWriter() {
   }
 
   if (i < txt.length && isTitle === true) {
-    paragraphHtml.innerHTML += txt.charAt(i);
+    paragraphHtml.textContent += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }

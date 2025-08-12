@@ -5,29 +5,52 @@ const experienceWrapper = document.querySelector('.experiences');
 // Import the job data from an external module (not shown in this code snippet)
 import { job } from '../data/database.js';
 
-// Loop through each job experience and create HTML code to display it
+const fragment = document.createDocumentFragment();
+
+// Loop through each job experience and create HTML elements to display it
 job.forEach((experience) => {
-  const responsibilities = experience.responsibilities
-    .map((item) => `<li>${item}</li>`)
-    .join('');
-  const results = experience.results.map((item) => `<li>${item}</li>`).join('');
+  const experienceDiv = document.createElement('div');
+  experienceDiv.className = 'experience';
 
-  const code = `
-      <div class="experience">
-          <div class="experience--content">
-              <div class="experience--media">
-                  <img class="experience--media__img" src="${experience.src}" alt="${experience.alt}">
-              </div>
-              <div class="experience--txt">
-                  <p class="experience--txt__year">${experience.period}</p>
-                  <h2 class="experience--txt__title">${experience.role} — ${experience.company}</h2>
-                  <p class="experience--txt__description">${experience.summary}</p>
-                  <ul class="experience--txt__list">${responsibilities}${results}</ul>
-              </div>
-          </div>
-      </div>
-    `;
+  const content = document.createElement('div');
+  content.className = 'experience--content';
 
-  // Add the generated HTML code for the current job experience to the experienceWrapper element
-  experienceWrapper.innerHTML += code;
+  const media = document.createElement('div');
+  media.className = 'experience--media';
+  const img = document.createElement('img');
+  img.className = 'experience--media__img';
+  img.src = experience.src;
+  img.alt = experience.alt;
+  media.appendChild(img);
+
+  const txt = document.createElement('div');
+  txt.className = 'experience--txt';
+  const year = document.createElement('p');
+  year.className = 'experience--txt__year';
+  year.textContent = experience.period;
+  const title = document.createElement('h2');
+  title.className = 'experience--txt__title';
+  title.textContent = `${experience.role} — ${experience.company}`;
+  const summary = document.createElement('p');
+  summary.className = 'experience--txt__description';
+  summary.textContent = experience.summary;
+  const list = document.createElement('ul');
+  list.className = 'experience--txt__list';
+  experience.responsibilities.forEach((item) => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    list.appendChild(li);
+  });
+  experience.results.forEach((item) => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    list.appendChild(li);
+  });
+
+  txt.append(year, title, summary, list);
+  content.append(media, txt);
+  experienceDiv.appendChild(content);
+  fragment.appendChild(experienceDiv);
 });
+
+experienceWrapper.appendChild(fragment);
