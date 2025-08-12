@@ -11,6 +11,7 @@ export default [
         window: 'readonly',
         document: 'readonly',
         emailjs: 'readonly',
+        plausible: 'readonly',
       },
     },
     extends: [airbnbBase, eslintConfigPrettier],
