@@ -1,87 +1,94 @@
 'use strict';
-//skill icon path
-const iconPath = './assets/images/Skills-icon/';
 //job img path
 const jobIconPath = './assets/images/';
 //social icon path
 const socialIconPath = './assets/images/social-icon/';
 
-//skill db
-export const skills = [
-  {
-    name: 'html',
-    src: `${iconPath}html.png`,
-  },
-  {
-    name: 'css',
-    src: `${iconPath}css.png`,
-  },
-  {
-    name: 'scss',
-    src: `${iconPath}scss.png`,
-  },
-  {
-    name: 'git',
-    src: `${iconPath}git.png`,
-  },
-  {
-    name: 'github',
-    src: `${iconPath}github.png`,
-  },
-  {
-    name: 'javascript',
-    src: `${iconPath}javascript.png`,
-  },
-  {
-    name: 'reactjs',
-    src: `${iconPath}react.png`,
-  },
-  {
-    name: 'typescript',
-    src: `${iconPath}typescript.png`,
-  },
-  {
-    name: 'nodejs',
-    src: `${iconPath}nodejs.png`,
-  },
-  {
-    name: 'Figma',
-    src: `${iconPath}figma.png`,
-  },
-];
+//skills
+export const skills = {
+  core: [
+    { name: 'Go', level: 'Advanced' },
+    { name: 'Fiber', level: 'Advanced' },
+    { name: 'PostgreSQL', level: 'Proficient' },
+    { name: 'Docker', level: 'Proficient' },
+    { name: 'TypeScript', level: 'Proficient' },
+  ],
+  used: [
+    { name: 'React', level: 'Proficient' },
+    { name: 'Node.js', level: 'Proficient' },
+    { name: 'GraphQL', level: 'Proficient' },
+    { name: 'TailwindCSS', level: 'Proficient' },
+    { name: 'MongoDB', level: 'Proficient' },
+  ],
+  learning: [
+    { name: 'Kubernetes', level: 'Beginner' },
+    { name: 'gRPC', level: 'Beginner' },
+    { name: 'Redis', level: 'Beginner' },
+    { name: 'Next.js', level: 'Beginner' },
+    { name: 'AWS', level: 'Beginner' },
+  ],
+};
 
-export const learningSkills = [
+//projects db
+export const projects = [
   {
-    name: 'python',
-    src: `${iconPath}python.png`,
+    title: 'Task Tracker API',
+    description:
+      'Freelance teams struggled to monitor tasks; built a Go/Fiber API with JWT auth. Result: shortened project reporting time by 30%.',
+    stack: ['Go', 'Fiber', 'Postgres'],
+    github: 'https://github.com/Erodot0/task-tracker',
+    live: 'https://task-tracker.example.com',
+    outcome: '-30% reporting time',
   },
   {
-    name: 'wordpress',
-    src: `${iconPath}wordpress.png`,
+    title: 'Portfolio Builder',
+    description:
+      'Bootstrapping devs needed a fast way to showcase work; created a React/Vite template generator. Live sites load 50% faster.',
+    stack: ['React', 'Vite', 'Tailwind'],
+    github: 'https://github.com/Erodot0/portfolio-builder',
+    live: 'https://portfolio-builder.example.com',
+    outcome: '50% faster load times',
   },
   {
-    name: 'mysql',
-    src: `${iconPath}mysql.png`,
+    title: 'IoT Energy Dashboard',
+    description:
+      'Homeowners lacked insight into energy usage; built a Node/GraphQL dashboard with real-time charts. Helped cut consumption by 15%.',
+    stack: ['Node', 'GraphQL', 'MongoDB'],
+    github: 'https://github.com/Erodot0/iot-energy-dashboard',
+    live: 'https://energy.example.com',
+    outcome: '-15% energy consumption',
   },
 ];
 
 //job db
 export const job = [
   {
-    title: 'Develhope',
+    company: 'Develhope',
+    role: 'Junior Full Stack Web Developer',
+    period: '2022',
     src: `${jobIconPath}develhope.jpg`,
-    alt: '',
-    year: 'Junior Full Stack Web Developer - 2022',
-    description:
-      'During my internship, I advanced from FE to BE, becoming a Full Stack developer skilled in HTML/CSS/JavaScript, Git, TypeScript, and React/Node software development. Developed a real-world web app with agile methodologies, leading and guiding fellow interns through the process as team leader.',
+    alt: 'Develhope logo',
+    summary:
+      'Internship progressing from frontend to backend, delivering production web app as team lead.',
+    responsibilities: [
+      'Developed features with React and Node',
+      'Led agile sprints for a 4-person intern team',
+    ],
+    results: ['Shipped MVP used by 50+ students'],
   },
   {
-    title: 'Kodland',
+    company: 'Kodland',
+    role: 'Web Developing Tutor',
+    period: '2023–Present',
     src: `${jobIconPath}kodland.jpg`,
-    alt: '',
-    year: 'Web developing tutor - Current',
-    description:
-      "Passionate coding tutor inspiring youngsters to learn HTML, CSS, and Javascript using fun and engaging classes with Kodland's materials. Dedicated to improving teaching skills with experienced mentors and providing detailed progress reports. Always striving to create innovative ways to support student learning and be a positive ambassador for Kodland.",
+    alt: 'Kodland logo',
+    summary:
+      'Teach coding fundamentals to young students in live online classes.',
+    responsibilities: [
+      'Run weekly HTML/CSS/JS workshops',
+      'Prepare detailed progress reports for parents',
+    ],
+    results: ['98% student course completion'],
   },
 ];
 

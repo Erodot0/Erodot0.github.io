@@ -1,23 +1,13 @@
 'use strict';
-import { skills, learningSkills } from '../data/database.js';
-const carousel = document.querySelector('.carousel--wrapper');
+import { skills } from '../data/database.js';
 
-//mobile skill injector
-skills.forEach((skill) => {
-  let code = `<li class="carousel--wrapper__item"><img src="${skill.src}" alt="${skill.name} icon"></li>`;
-  carousel.innerHTML += code;
-});
+const renderSkills = (list, id) => {
+  const container = document.querySelector(`#${id}`);
+  list.forEach((skill) => {
+    container.innerHTML += `<li>${skill.name} — ${skill.level}</li>`;
+  });
+};
 
-//pc skill injector
-const obtainedSkills = document.querySelector('#learnedSkills');
-skills.forEach((skill) => {
-  let code = `<div class="skillsPc--container"><img class="skillsPc--container__item" src="${skill.src}" alt="${skill.name} icon"></div>`;
-  obtainedSkills.innerHTML += code;
-});
-
-// learning skills injector
-const inprogressSkills = document.querySelector('#inProgress');
-learningSkills.forEach((skill) => {
-  let code = `<div class="skillsPc--container"><img class="skillsPc--container__item" src="${skill.src}" alt="${skill.name} icon"></div>`;
-  inprogressSkills.innerHTML += code;
-});
+renderSkills(skills.core, 'coreSkills');
+renderSkills(skills.used, 'usedSkills');
+renderSkills(skills.learning, 'learningSkills');
