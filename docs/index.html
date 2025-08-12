@@ -9,13 +9,14 @@
       name="description"
       content="Personal portfolio of Janmanpreet Singh, software engineer specializing in Go, Fiber, and Postgres, showcasing projects, skills, experience, and contact info."
     />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' https://placehold.co data:; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'"
+    />
+    <meta name="referrer" content="no-referrer" />
     <link rel="canonical" href="https://www.janmanpreet.com/" />
     <meta name="robots" content="index, follow" />
-    <link
-      rel="icon"
-      href="https://placehold.co/256x256/png"
-      type="image/png"
-    />
+    <link rel="icon" href="https://placehold.co/256x256/png" type="image/png" />
     <!-- meta tags -->
     <!-- Search Engine -->
     <meta name="image" content="https://placehold.co/256x256/png" />
@@ -252,7 +253,7 @@
     <script type="module" src="./script/modules/ui/typewriting.js"></script>
     <script type="module" src="./script/modules/ui/navHandler.js"></script>
     <script type="module" src="./script/modules/ui/contactEffect.js"></script>
-    <script type="module" src="./script/modules/ui/emailjsSender.js"></script>
+    <script type="module" src="./script/modules/ui/formSender.js"></script>
     <script type="module" src="./script/modules/ui/socialInjector.js"></script>
     <script
       type="module"
@@ -263,15 +264,6 @@
       src="./script/modules/ui/projectsInjector.js"
     ></script>
     <script type="module" src="./script/modules/ui/skillInjector.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init('ZKX9Xt1UaNb3P15Ad');
-      })();
-    </script>
   </head>
 
   <body>
@@ -399,56 +391,71 @@
         <div class="contactContainer">
           <ul class="contactContainer--social"></ul>
 
-        <form class="form-wrapper" id="contact-form">
-          <div class="form">
-            <div class="formInputWrapper">
+          <form class="form-wrapper" id="contact-form">
+            <div class="form">
+              <div class="formInputWrapper">
+                <div class="form--field">
+                  <label class="form--field__label" for="formName">Name</label>
+                  <input
+                    class="form--field__input"
+                    required
+                    name="name"
+                    id="formName"
+                    type="text"
+                  />
+                </div>
+                <div class="form--field">
+                  <label class="form--field__label" for="formEmail"
+                    >Email</label
+                  >
+                  <input
+                    class="form--field__input"
+                    required
+                    name="email"
+                    id="formEmail"
+                    type="email"
+                  />
+                </div>
+              </div>
               <div class="form--field">
-                <label class="form--field__label" for="formName">Name</label>
-                <input
+                <label class="form--field__label" for="formMessage"
+                  >Message</label
+                >
+                <textarea
                   class="form--field__input"
                   required
-                  name="name"
-                  id="formName"
+                  name="message"
+                  id="formMessage"
                   type="text"
-                />
-              </div>
-              <div class="form--field">
-                <label class="form--field__label" for="formEmail">Email</label>
-                <input
-                  class="form--field__input"
-                  required
-                  name="email"
-                  id="formEmail"
-                  type="email"
-                />
+                ></textarea>
               </div>
             </div>
-            <div class="form--field">
-              <label class="form--field__label" for="formMessage"
-                >Message</label
+            <div class="form--field" aria-hidden="true" style="display: none">
+              <label class="form--field__label" for="formWebsite"
+                >Website</label
               >
-              <textarea
+              <input
                 class="form--field__input"
-                required
-                name="message"
-                id="formMessage"
+                name="website"
+                id="formWebsite"
                 type="text"
-              ></textarea>
-            </div>
-          </div>
-          <input class="form--btn" type="submit" value="Send Message" />
-          <div class="emailSentWRapper">
-            <h3 class="emailSentWRapper--title"></h3>
-            <div class="emailSentWRapper--media">
-              <img
-                class="emailSentWRapper--media__img"
-                src=""
-                alt="Status icon"
+                tabindex="-1"
+                autocomplete="off"
               />
             </div>
-          </div>
-        </form>
-      </div>
+            <input class="form--btn" type="submit" value="Send Message" />
+            <div class="emailSentWRapper">
+              <h3 class="emailSentWRapper--title"></h3>
+              <div class="emailSentWRapper--media">
+                <img
+                  class="emailSentWRapper--media__img"
+                  src=""
+                  alt="Status icon"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
 
@@ -466,7 +473,12 @@
         <div class="footerWrapper">
           <p class="footer--text">
             Some icons were taken from
-            <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a>.
+            <a
+              href="https://www.flaticon.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Flaticon</a
+            >.
           </p>
           <div class="footer--social">
             <a href="https://github.com/Erodot0" target="_blank">GitHub</a>
