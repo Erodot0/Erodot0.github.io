@@ -1,0 +1,104 @@
+{
+  "settings": {
+    "startDate": "2026-02-01",
+    "saturdayMeetingTime": "17:00",
+    "valentineDay": "2026-02-14"
+  },
+
+  "texts": {
+    "introQuestion": "Vuoi essere la mia Valentine?",
+    "yesButton": "Sì! 💕",
+    "noButton": "No",
+    "celebrationMessage": "Lo sapevo! 🎉💕 Non avevi scelta, il bottone \"No\" era troppo fifone per farsi cliccare!",
+    "gameExplanation": "E ora preparati... perché questa settimana sarà speciale! Da lunedì a venerdì ti aspettano 5 giorni di sorprese: ogni giorno troverai un indovinello da risolvere (scrivimi la risposta su WhatsApp!) e due regalini da scartare. Non sbirciare in anticipo, però! Ogni giorno ha le sue sorprese. Ci vediamo domani per il primo indovinello! 💝",
+    "saturdayMessage": "Ce l'hai fatta! 🎉 Hai completato tutti e 5 i giorni di indovinelli e sorprese. Spero che questa settimana ti abbia fatto sorridere almeno un po'. Ma la sorpresa più bella deve ancora arrivare... ci vediamo tra poco! 💕",
+    "countdownLabel": "Ci vediamo tra:",
+    "comingSoonMessage": "Qualcosa di speciale sta per arrivare... 💕 Torna domenica!",
+    "countdownFinishedMessage": "È ora! 💕 Sto arrivando da te!"
+  },
+
+  "days": [
+    {
+      "day": 1,
+      "dayName": "Lunedì",
+      "riddle": {
+        "text": "Nel primo incontro, tra gusti e colori, assaggiammo insieme dolci sapori. Un posto freddo che scalda il cuore, dove è iniziata questa storia d'amore. Cos'è?"
+      },
+      "variableGift": {
+        "type": "song",
+        "title": "PLACEHOLDER - Titolo canzone",
+        "content": "Questa canzone mi fa pensare a te ogni volta che la ascolto.",
+        "link": "PLACEHOLDER - Link alla canzone"
+      },
+      "poetryGift": {
+        "verses": "I tuoi occhi sono stelle nella notte,\ndue luci che mi guidano sicure.\nIn essi vedo mille avventure,\ne un futuro di emozioni fitte.",
+        "author": "Per te"
+      }
+    },
+    {
+      "day": 2,
+      "dayName": "Martedì",
+      "riddle": {
+        "text": "Un posto d'auto, niente di speciale, eppure per noi è diventato immortale. Lì ci troviamo ogni volta che possiamo, e lì per la prima volta ci baciammo. Dov'è?"
+      },
+      "variableGift": {
+        "type": "flower",
+        "title": "Una Rosa per te 🌹",
+        "content": "Come ogni rosa che ti ho regalato, anche questa è un piccolo pezzo del mio cuore. La prima fu per il tuo compleanno, ma ogni giorno meriteresti un intero giardino."
+      },
+      "poetryGift": {
+        "verses": "Il tuo sorriso illumina le giornate,\ncome il sole dopo la tempesta.\nQuando sorridi è sempre festa,\ne spariscono le ore grigie e stancate.",
+        "author": "Per te"
+      }
+    },
+    {
+      "day": 3,
+      "dayName": "Mercoledì",
+      "riddle": {
+        "text": "Sotto un albero distesi, rilassati e felici, guardavamo scoiattoli come fossero amici. In un giardino regale, abbracciati per la prima volta, una coperta, del cibo e la giornata sciolta. Che tipo di giornata era?"
+      },
+      "variableGift": {
+        "type": "coupon",
+        "title": "Coupon Baci Illimitati 💋",
+        "content": "Questo coupon ti dà diritto a baci illimitati, da riscuotere quando vuoi, dove vuoi, per sempre. Non ha scadenza. Valido 24 ore su 24, 7 giorni su 7. Effetti collaterali: sorrisi spontanei e felicità improvvisa."
+      },
+      "poetryGift": {
+        "verses": "I tuoi capelli morbidi e lucenti,\nche il vento muove come onde in mare.\nNon mi stanco mai di accarezzare,\nquei fili d'oro così splendenti.",
+        "author": "Per te"
+      }
+    },
+    {
+      "day": 4,
+      "dayName": "Giovedì",
+      "riddle": {
+        "text": "Petali vellutati, profumo delicato, per il tuo compleanno te l'ho regalato. Rossa come l'amore che provo per te, il fiore più classico... sai qual è?"
+      },
+      "variableGift": {
+        "type": "memory",
+        "title": "Quel pomeriggio alla Villa Reale 🌳",
+        "content": "Ti ricordi quel giorno ai giardini della Villa Reale di Monza? Eravamo sdraiati sotto l'albero, io e te, a parlare di tutto e di niente. Guardavamo gli scoiattoli correre tra i rami. E poi il primo abbraccio, lì, rilassati sul prato. Uno dei miei ricordi preferiti con te."
+      },
+      "poetryGift": {
+        "verses": "La tua bellezza non ha paragone,\nsei arte che cammina tra la gente.\nMi hai conquistato completamente,\ne mi hai rubato tutto il cuore in un mattone.",
+        "author": "Per te"
+      }
+    },
+    {
+      "day": 5,
+      "dayName": "Venerdì",
+      "riddle": {
+        "text": "Un parco di film, attori e avventure, tra set e attrazioni e tante paure. Insieme l'abbiamo esplorato un giorno, in questo magico luogo senza ritorno. Dove siamo stati?"
+      },
+      "variableGift": {
+        "type": "song",
+        "title": "PLACEHOLDER - Titolo canzone",
+        "content": "L'ultima canzone di questa settimana. Ogni nota parla di te.",
+        "link": "PLACEHOLDER - Link alla canzone"
+      },
+      "poetryGift": {
+        "verses": "L'amore che provo è immenso e sincero,\ncresce ogni giorno che passo con te.\nSei tutto quello che chiedo perché,\ninsieme a te ho trovato il mio vero.",
+        "author": "Sei il mio mondo"
+      }
+    }
+  ]
+}
