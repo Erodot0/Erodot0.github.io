@@ -4,7 +4,6 @@
     "saturdayMeetingTime": "17:00",
     "valentineDay": "2026-02-14"
   },
-
   "texts": {
     "introQuestion": "Vuoi essere la mia Valentine?",
     "yesButton": "Sì! 💕",
@@ -13,25 +12,25 @@
     "gameExplanation": "E ora preparati... perché questa settimana sarà speciale! Da lunedì a venerdì ti aspettano 5 giorni di sorprese: ogni giorno troverai un indovinello da risolvere (scrivimi la risposta su WhatsApp!) e due regalini da scartare. Non sbirciare in anticipo, però! Ogni giorno ha le sue sorprese. Ci vediamo domani per il primo indovinello! 💝",
     "saturdayMessage": "Ce l'hai fatta! 🎉 Hai completato tutti e 5 i giorni di indovinelli e sorprese. Spero che questa settimana ti abbia fatto sorridere almeno un po'. Ma la sorpresa più bella deve ancora arrivare... ci vediamo tra poco! 💕",
     "countdownLabel": "Ci vediamo tra:",
-    "comingSoonMessage": "Qualcosa di speciale sta per arrivare... 💕 Torna domenica!",
+    "comingSoonMessage": "Qualcosa di speciale sta per arrivare...💕 Torna piu tardi!",
     "countdownFinishedMessage": "È ora! 💕 Sto arrivando da te!"
   },
-
   "days": [
     {
       "day": 1,
       "dayName": "Lunedì",
       "riddle": {
-        "text": "Nel primo incontro, tra gusti e colori, assaggiammo insieme dolci sapori. Un posto freddo che scalda il cuore, dove è iniziata questa storia d'amore. Cos'è?"
+        "text": "Nel primo incontro, tra gusti e colori, assaggiammo insieme dolci sapori. Un posto freddo che scalda il cuore, dove è iniziata questa storia d'amore. Cos'è?",
+        "hint": "Possiamo guardare un film speciale una di queste sere? anche il film è una sorpresa"
       },
       "variableGift": {
         "type": "song",
-        "title": "PLACEHOLDER - Titolo canzone",
-        "content": "Questa canzone mi fa pensare a te ogni volta che la ascolto.",
-        "link": "PLACEHOLDER - Link alla canzone"
+        "title": "Akhar | Amrinder Gill",
+        "content": "Meri surt bhula ti tere naam de akhar ne",
+        "link": "https://www.youtube.com/watch?v=BneomzOccuk"
       },
       "poetryGift": {
-        "verses": "I tuoi occhi sono stelle nella notte,\ndue luci che mi guidano sicure.\nIn essi vedo mille avventure,\ne un futuro di emozioni fitte.",
+        "verses": "Due mari profondi, color cioccolato,\n dove ogni sguardo resta incantato.\n Occhi che parlano senza parole,\n scaldano l'anima in ogni stagione.",
         "author": "Per te"
       }
     },
@@ -47,7 +46,7 @@
         "content": "Come ogni rosa che ti ho regalato, anche questa è un piccolo pezzo del mio cuore. La prima fu per il tuo compleanno, ma ogni giorno meriteresti un intero giardino."
       },
       "poetryGift": {
-        "verses": "Il tuo sorriso illumina le giornate,\ncome il sole dopo la tempesta.\nQuando sorridi è sempre festa,\ne spariscono le ore grigie e stancate.",
+        "verses": "Un sorriso che parte piano piano,\nche ti conquista senza alzare mano.\nTenero, dolce, come un abbraccio,\nche scioglie il freddo di ogni ghiaccio.",
         "author": "Per te"
       }
     },
@@ -63,7 +62,7 @@
         "content": "Questo coupon ti dà diritto a baci illimitati, da riscuotere quando vuoi, dove vuoi, per sempre. Non ha scadenza. Valido 24 ore su 24, 7 giorni su 7. Effetti collaterali: sorrisi spontanei e felicità improvvisa."
       },
       "poetryGift": {
-        "verses": "I tuoi capelli morbidi e lucenti,\nche il vento muove come onde in mare.\nNon mi stanco mai di accarezzare,\nquei fili d'oro così splendenti.",
+        "verses": "Capelli di notte, lunghi e ribelli,\nche danzano mossi, liberi e belli.\nOnde scure che cadono lente,\ncornici perfette di un viso splendente.",
         "author": "Per te"
       }
     },
@@ -79,7 +78,7 @@
         "content": "Ti ricordi quel giorno ai giardini della Villa Reale di Monza? Eravamo sdraiati sotto l'albero, io e te, a parlare di tutto e di niente. Guardavamo gli scoiattoli correre tra i rami. E poi il primo abbraccio, lì, rilassati sul prato. Uno dei miei ricordi preferiti con te."
       },
       "poetryGift": {
-        "verses": "La tua bellezza non ha paragone,\nsei arte che cammina tra la gente.\nMi hai conquistato completamente,\ne mi hai rubato tutto il cuore in un mattone.",
+        "verses": "Un viso dipinto con cura infinita,\nlineamenti gentili, bellezza scolpita.\nOpera rara, delicata e vera,\ncome un quadro d'autunno a primavera.",
         "author": "Per te"
       }
     },
@@ -91,12 +90,12 @@
       },
       "variableGift": {
         "type": "song",
-        "title": "PLACEHOLDER - Titolo canzone",
-        "content": "L'ultima canzone di questa settimana. Ogni nota parla di te.",
-        "link": "PLACEHOLDER - Link alla canzone"
+        "title": "Akhiyan - Nirvair Pannu",
+        "content": "Ascoltavo questa canzone quando avevo appena iniziato a scriverti. Tu non c'eri ancora, ma lei mi portava da te",
+        "link": "https://www.youtube.com/watch?v=-UUxXl4q6Mc"
       },
       "poetryGift": {
-        "verses": "L'amore che provo è immenso e sincero,\ncresce ogni giorno che passo con te.\nSei tutto quello che chiedo perché,\ninsieme a te ho trovato il mio vero.",
+        "verses": "Non servono grandi gesti o parole,\nbastano sguardi, carezze e ore.\nUn amore semplice, fatto di poco,\nche scalda l'inverno piu di un fuoco.",
         "author": "Sei il mio mondo"
       }
     }

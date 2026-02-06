@@ -263,7 +263,7 @@
   function getGiftTypeIcon(type) {
     switch (type) {
       case 'song': return '\uD83C\uDFB5';
-      case 'flower': return '\uD83C\uDF38';
+      case 'flower': return '';
       case 'coupon': return '\uD83C\uDF9F\uFE0F';
       case 'memory': return '\uD83D\uDCAD';
       default: return '\uD83C\uDF81';
@@ -564,20 +564,22 @@
     document.getElementById('archive-day-title').textContent = dayData.dayName;
     document.getElementById('archive-riddle-text').textContent = dayData.riddle.text;
 
-    // Show gift preview cards that open the modal on tap
+    // Set gift labels with type icon
+    var label1 = document.getElementById('archive-gift-label-1');
+    var label2 = document.getElementById('archive-gift-label-2');
+    if (label1) label1.textContent = getGiftTypeIcon(dayData.variableGift.type) + ' Sorpresa';
+    if (label2) label2.textContent = '\uD83D\uDCDC Poesia';
+
+    // Gift boxes open the modal on tap
     var archiveGift1 = document.getElementById('archive-gift-1');
     var archiveGift2 = document.getElementById('archive-gift-2');
 
-    archiveGift1.innerHTML = renderVariableGiftContent(dayData.variableGift);
-    archiveGift2.innerHTML = renderPoetryGiftContent(dayData.poetryGift);
-
-    archiveGift1.style.cursor = 'pointer';
-    archiveGift2.style.cursor = 'pointer';
-
     archiveGift1.onclick = function () {
+      spawnSparkles(archiveGift1);
       openGiftModal(renderVariableGiftContent(dayData.variableGift));
     };
     archiveGift2.onclick = function () {
+      spawnSparkles(archiveGift2);
       openGiftModal(renderPoetryGiftContent(dayData.poetryGift));
     };
 
