@@ -20,8 +20,8 @@
       "day": 1,
       "dayName": "Lunedì",
       "riddle": {
-        "text": "Nel primo incontro, tra gusti e colori, assaggiammo insieme dolci sapori. Un posto freddo che scalda il cuore, dove è iniziata questa storia d'amore. Cos'è?",
-        "hint": "Possiamo guardare un film speciale una di queste sere? anche il film è una sorpresa"
+        "text": "La prima volta che siamo usciti, tra un gusto e l'altro ci siamo scelti. Un posto freddo ma che scalda dentro, è lì che è cominciato tutto. Dove eravamo?",
+        "hint": "Hai due occhi che non ho ancora capito, scuri, profondi, color cioccolato. Mi ci perdo ogni volta, lo giuro, e non è che ci provi: mi succede e basta. Parlano sempre, e scaldano anche quando fuori fa freddo"
       },
       "variableGift": {
         "type": "song",
