@@ -24,7 +24,7 @@ const ui = {
     it: "Costruisco e mantengo web app dall'inizio alla fine — React sul front-end, Python sul back-end — e nel frattempo insegno a programmare ai più piccoli.",
   },
   "hero.cta.work": { en: "View work history", it: "Vedi esperienza" },
-  "hero.cta.cv": { en: "Download CV ↓", it: "Scarica il CV ↓" },
+  "hero.cta.cv": { en: "Download CV ↓", it: "Scarica CV ↓" },
   "hero.scroll": { en: "Scroll", it: "Scorri" },
 
   "about.label": { en: "About", it: "Chi sono" },
