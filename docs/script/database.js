@@ -16,7 +16,7 @@ export const experience = [
   {
     company: "Siav Spa",
     role: { en: "Software Developer", it: "Sviluppatore Software" },
-    period: { en: "May 2023 – Present", it: "Mag 2023 – Presente" },
+    period: { en: "2023 – Present", it: "2023 – Presente" },
     location: { en: "Milan, Italy", it: "Milano, Italia" },
     logo: "", // no asset on file → initials-badge fallback
     current: true,
@@ -41,7 +41,7 @@ export const experience = [
   {
     company: "Kodland",
     role: { en: "Web Development Tutor", it: "Tutor di Sviluppo Web" },
-    period: { en: "Feb 2023 – Jun 2023", it: "Feb 2023 – Giu 2023" },
+    period: { en: "2022 – 2023", it: "2022 – 2023" },
     location: { en: "Remote", it: "Da remoto" },
     logo: `${jobIconPath}kodland.jpg`,
     bullets: [
@@ -66,7 +66,7 @@ export const experience = [
   {
     company: "Develhope",
     role: { en: "Full-Stack Web Developer (Bootcamp)", it: "Sviluppatore Web Full-Stack (Bootcamp)" },
-    period: { en: "May 2022 – Dec 2022", it: "Mag 2022 – Dic 2022" },
+    period: { en: "2022", it: "2022" },
     location: { en: "Remote", it: "Da remoto" },
     logo: `${jobIconPath}develhope.jpg`,
     bullets: [
@@ -87,7 +87,7 @@ export const experience = [
   {
     company: "Flex",
     role: { en: "Warehouse Operator", it: "Operatore di Magazzino" },
-    period: { en: "Sep 2020 – Feb 2022", it: "Set 2020 – Feb 2022" },
+    period: { en: "2020 – 2022", it: "2020 – 2022" },
     location: { en: "Somaglia, Italy", it: "Somaglia, Italia" },
     logo: "",
     muted: true, // pre-dev role — rendered visually lighter
