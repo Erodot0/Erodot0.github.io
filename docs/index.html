@@ -3,173 +3,207 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Janmanpreet</title>
-  <link rel="shortcut icon" href="./assets/images/icon.jpg" type="image/x-icon">
-  <!-- meta tags -->
-  <meta charset="utf-8">
-  <title>Janmanpreet Singh</title>
-  <!-- Search Engine -->
-  <meta name="image" content="./assets/images/icon.jpg">
-  <!-- Schema.org for Google -->
-  <meta itemprop="name" content="Janmanpreet Singh">
-  <meta itemprop="image" content="./assets/images/icon.jpg">
-  <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-  <meta name="og:title" content="Janmanpreet Singh">
-  <meta name="og:url" content="https://www.janmanpreet.com/">
-  <meta name="og:site_name" content="Janmanpreet">
-  <meta name="og:type" content="website">
-  <!-- style -->
+  <title>Janmanpreet Singh — Full-Stack Software Developer</title>
+  <meta name="description"
+    content="Janmanpreet Singh — Full-Stack Software Developer. React on the front, Python on the back. I build and maintain web apps end-to-end, and teach kids to code." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="shortcut icon" href="./assets/images/icon.jpg" type="image/x-icon" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Janmanpreet Singh — Full-Stack Software Developer" />
+  <meta property="og:description"
+    content="React on the front, Python on the back. I build and maintain web apps end-to-end." />
+  <meta property="og:url" content="https://janmanpreet.com/" />
+  <meta property="og:image" content="https://janmanpreet.com/assets/images/og-image.jpg" />
+  <meta property="og:site_name" content="Janmanpreet Singh" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Janmanpreet Singh — Full-Stack Software Developer" />
+  <meta name="twitter:description"
+    content="React on the front, Python on the back. I build and maintain web apps end-to-end." />
+  <meta name="twitter:image" content="https://janmanpreet.com/assets/images/og-image.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="./style/style.css" />
-  <link rel="stylesheet" href="./style/footer.css">
-  <!-- scripts -->
-  <script defer src=" ./script/typewriting.js"></script>
-  <script defer src="./script/skillCarouselScroll.js"></script>
-  <script defer src="./script/navHandler.js"></script>
-  <script defer src="./script/contactEffect.js"></script>
-  <script defer src="./script/emailjsSender.js"></script>
-  <script defer type="module" src="./script/socialInjector.js"></script>
-  <script defer type="module" src="./script/experienceInjector.js"></script>
-  <script defer type="module" src="./script/skillInjector.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("ZKX9Xt1UaNb3P15Ad");
-    })();
-  </script>
+
+  <!-- Scripts -->
+  <script defer src="./script/field.js"></script>
+  <script defer type="module" src="./script/i18n.js"></script>
+  <script defer type="module" src="./script/render.js"></script>
+  <script defer src="./script/nav.js"></script>
+  <script defer src="./script/motion.js"></script>
 </head>
 
 <body>
-  <header class="navbar" id="navbar">
-    <a href="#navbar" class="navbar--logo">
-      JS
-    </a>
-    <div class="navbar--menu">
-      <div class="navbar--menu__hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+  <!-- interactive dot field (signature background) -->
+  <canvas class="field" id="field" aria-hidden="true"></canvas>
+
+  <!-- scroll progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <!-- ─────────────── NAV ─────────────── -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo" aria-label="Home">JS</a>
+      <div class="nav__right">
+        <button class="lang" id="langToggle" type="button" aria-label="Switch language">
+          <span data-lang="en">EN</span>
+          <span class="lang__sep" aria-hidden="true">/</span>
+          <span data-lang="it">IT</span>
+        </button>
+        <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav__menu" id="navMenu" aria-label="Primary">
+          <a href="#about" data-magnetic data-i18n="nav.about">About</a>
+          <a href="#experience" data-magnetic data-i18n="nav.experience">Experience</a>
+          <a href="#awards" data-magnetic data-i18n="nav.awards">Awards</a>
+          <a href="#skills" data-magnetic data-i18n="nav.skills">Skills</a>
+          <a href="#contact" data-magnetic data-i18n="nav.contact">Contact</a>
+          <a href="./assets/CV-Janmanpreet_Singh_en.pdf" download="cv_janmanpreet" class="nav__cv" data-magnetic
+            data-i18n="nav.cv">CV ↓</a>
+        </nav>
       </div>
-      <ul class="navbar--menu__list menuClickEffect">
-        <li class="liClickEffect"><a href="#about">About</a></li>
-        <li class="liClickEffect"><a href="#experience">Experience</a></li>
-        <li class="liClickEffect"><a href="#contact">Contact</a></li>
-        <li class="liClickEffect"><a href="./assets/CV-Janmanpreet_Singh_en.pdf" download="cv_janmanpreet">Cv</a></li>
-      </ul>
     </div>
   </header>
 
-  <!-- main -->
-  <div class="main wrapper" id="heroWrapper">
-    <div class="main--text">
-      <h1 class="main--text__title">I'm <br> janmanpreet Singh</h1>
-      <p class="main--text__paragraph"></p>
-    </div>
-    <div class="main--media">
-      <img class="main--media__img1" src="./assets/images/img1.jpg" alt="">
-    </div>
-  </div>
-
-  <div class="about wrapper" id="about">
-    <div class="about--text">
-      <h2 class="about--text__title"></h2>
-      <p class="about--text__paragraph">
-      </p>
-    </div>
-    <div class="about--media">
-      <img class="about--media__img" src="./assets/images/img2.jpg" alt="">
-    </div>
-    <!-- skills carousel -->
-    <div class="skills">
-      <div class="skills--text">
-        <h2 class="skills--text__title">Skills</h2>
-      </div>
-      <div class="skills--carousel">
-        <ul class="carousel--wrapper">
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- skill container for pc -->
-  <div class="skillPc wrapper">
-    <div class="skillWrapper">
-      <div class="skillWrapper--text">
-        <h2 class="skillWrapper--text__title">Learned</h2>
-      </div>
-      <div class="skillsPc" id="learnedSkills"></div>
-    </div>
-    <div class="skillPc--title">
-      <h1>Skills</h1>
-    </div>
-    <div class="skillWrapper">
-      <div class="skillWrapper--text">
-        <h2 class="skillWrapper--text__title">Learning</h2>
-      </div>
-      <div class="skillsPc" id="inProgress"></div>
-    </div>
-  </div>
-
-  <div class="experiences section wrapper" id="experience">
-    <h1 class="experiences--title">Experiences</h1>
-  </div>
-
-  <div class="contact wrapper" id="contact">
-    <h1 class="contactTitle">Contact me!</h1>
-    <div class="contactContainer">
-      <ul class="contactContainer--social">
-      </ul>
-
-      <form class="form-wrapper" id="contact-form">
-        <div class="form">
-          <div class="formInputWrapper">
-            <div class="form--field">
-              <label class="form--field__label" for="formName">Name</label>
-              <input class="form--field__input" required name="name" id="formName" type="text">
-            </div>
-            <div class="form--field">
-              <label class="form--field__label" for="formEmail">Email</label>
-              <input class="form--field__input" required name="email" id="formEmail" type="email">
-            </div>
-          </div>
-          <div class="form--field">
-            <label class="form--field__label" for="formMessage">Message</label>
-            <textarea class="form--field__input" required name="message" id="formMessage" type="text"></textarea>
-          </div>
+  <main id="top">
+    <!-- ─────────────── HERO ─────────────── -->
+    <section class="hero" id="hero">
+      <div class="hero__inner wrap">
+        <p class="hero__eyebrow" data-hero="1" data-i18n="hero.eyebrow">Full-Stack Software Developer</p>
+        <h1 class="hero__name">
+          <span class="line"><span data-hero="2">Janmanpreet</span></span>
+          <span class="line"><span data-hero="3">Singh</span></span>
+        </h1>
+        <p class="hero__intro" data-hero="4" data-i18n="hero.intro">
+          I build and maintain web apps end-to-end — React on the front, Python on the
+          back — and I teach kids to code along the way.
+        </p>
+        <div class="hero__cta" data-hero="5">
+          <a href="#experience" class="btn btn--solid" data-magnetic data-i18n="hero.cta.work">View work history</a>
+          <a href="./assets/CV-Janmanpreet_Singh_en.pdf" download="cv_janmanpreet" class="btn btn--ghost"
+            data-magnetic data-i18n="hero.cta.cv">Download CV ↓</a>
         </div>
-        <input class="form--btn" type="submit" value="Send"></input>
-        <div class="emailSentWRapper">
-          <h3 class="emailSentWRapper--title"></h3>
-          <div class="emailSentWRapper--media">
-            <img class="emailSentWRapper--media__img" src="">
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
+      </div>
+      <div class="hero__scroll" data-hero="6" aria-hidden="true">
+        <span data-i18n="hero.scroll">Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
 
-  <footer>
-    <div class="waveWrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#000000" fill-opacity="1"
-          d="M0,160L60,165.3C120,171,240,181,360,186.7C480,192,600,192,720,176C840,160,960,128,1080,133.3C1200,139,1320,181,1380,202.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+    <!-- ─────────────── ABOUT + EDUCATION ─────────────── -->
+    <section class="about wrap" id="about">
+      <p class="section-label" data-reveal data-i18n="about.label">About</p>
+      <div class="about__grid">
+        <div class="about__bio">
+          <p data-reveal data-i18n="about.bio.1">
+            I'm a young, passionate web developer with leadership and communication skills
+            honed as a former team leader. I enjoy collaborating with others, motivating
+            teammates, and solving complex problems.
+          </p>
+          <p data-reveal data-i18n="about.bio.2">
+            As a coding teacher to young children, I create engaging, supportive learning
+            experiences. I thrive both solo and on a team, always chasing new challenges
+            and growth.
+          </p>
+        </div>
+        <aside class="about__side">
+          <ul class="facts" data-reveal>
+            <li><span class="facts__k" data-i18n="facts.role.k">Role</span><span class="facts__v"
+                data-i18n="facts.role.v">Software Developer @ Siav Spa</span></li>
+            <li><span class="facts__k" data-i18n="facts.focus.k">Focus</span><span class="facts__v"
+                data-i18n="facts.focus.v">Full-stack web · React · Python</span></li>
+            <li><span class="facts__k" data-i18n="facts.also.k">Also</span><span class="facts__v"
+                data-i18n="facts.also.v">Coding tutor</span></li>
+            <li><span class="facts__k" data-i18n="facts.cv.k">CV</span><span class="facts__v"><a
+                  href="./assets/CV-Janmanpreet_Singh_en.pdf" download="cv_janmanpreet"
+                  data-i18n="facts.cv.v">Download ↓</a></span></li>
+          </ul>
+          <div class="edu" data-reveal>
+            <p class="edu__label" data-i18n="edu.label">Education</p>
+            <ul id="educationList"></ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ─────────────── EXPERIENCE ─────────────── -->
+    <section class="experience section--invert" id="experience">
+      <div class="wrap">
+        <p class="section-label section-label--invert" data-reveal data-i18n="exp.label">Experience</p>
+        <h2 class="section-title" data-reveal data-i18n="exp.title">Where I've worked</h2>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION GOES HERE LATER -->
+
+    <!-- ─────────────── AWARDS / PREMI ─────────────── -->
+    <section class="awards wrap" id="awards">
+      <p class="section-label" data-reveal data-i18n="awards.label">Awards · Premi</p>
+      <h2 class="section-title" data-reveal data-i18n="awards.title">Recognition</h2>
+      <div class="awards__grid" id="awardsGrid"></div>
+    </section>
+
+    <!-- ─────────────── SKILLS ─────────────── -->
+    <section class="skills" id="skills">
+      <div class="wrap">
+        <p class="section-label" data-reveal data-i18n="skills.label">Skills</p>
+        <h2 class="section-title" data-reveal data-i18n="skills.title">Tech stack</h2>
+      </div>
+      <div class="marquee" id="marquee" aria-hidden="true">
+        <div class="marquee__track" id="marqueeTrack"></div>
+      </div>
+      <div class="wrap">
+        <div class="stack" id="stackGrid"></div>
+      </div>
+    </section>
+
+    <!-- ─────────────── CONTACT ─────────────── -->
+    <section class="contact section--invert" id="contact">
+      <div class="wrap">
+        <p class="section-label section-label--invert" data-reveal data-i18n="contact.label">Contact</p>
+        <h2 class="contact__headline" data-reveal data-i18n="contact.headline">Let's talk.</h2>
+        <a class="contact__email" id="contactEmail" data-reveal data-magnetic href="#">—</a>
+        <div class="contact__row" data-reveal>
+          <ul class="socials" id="socialsList"></ul>
+          <a href="./assets/CV-Janmanpreet_Singh_en.pdf" download="cv_janmanpreet" class="btn btn--ghost btn--invert"
+            data-magnetic data-i18n="contact.cv">Download CV ↓</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─────────────── FOOTER ─────────────── -->
+  <footer class="footer">
+    <div class="footer__wave" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path
+          d="M0,64L80,58.7C160,53,320,43,480,48C640,53,800,75,960,74.7C1120,75,1280,53,1360,42.7L1440,32L1440,0L0,0Z">
         </path>
       </svg>
     </div>
-    <div class="footer">
-      <div class="footerWrapper">
-        <p class="footer--text">Version 1.0.4</p>
-        <p class="footer--text">This website was designed and created by <br> Janmanpreet Singh</p>
-        <p class="footer--text">Some icons were taken from
-          <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a>,
-          the illustrations were taken from
-          <a href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">Freepik</a>
-          or
-          <a href="https://blush.design/en" target="_blank" rel="noopener noreferrer">Blush</a>
-        </p>
-      </div>
+    <div class="footer__inner wrap">
+      <span class="footer__logo">JS</span>
+      <p class="footer__credit" data-i18n="footer.credit">Designed &amp; built by Janmanpreet Singh.</p>
+      <p class="footer__version">Version 2.0.0</p>
     </div>
   </footer>
 </body>
